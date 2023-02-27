@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabelas</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 400px;
+        }
+        th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+        td{
+            border: 1px solid black;  
+            padding: 10px; 
+        }
+       thead{
+        color: white;
+        background-color: gray;
+       }
+       tfoot{
+        color: white;
+        background-color: gray;
+       }
+       td.num{
+        text-align: right;
+       }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>estado</th>   
+                <th>populaçao</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>sao paulo</td>
+                <td class="num" >45 919 049</td>
+                
+            </tr>
+            <tr>
+                <td>minas gerais</td>
+                <td class="num" >40 900 508</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <th>total de habiantes</th>
+            <td class="num" ><strong>80 844 810</strong></td>
+        </tfoot>
+    </table>
+    
+</body>
+</html>
