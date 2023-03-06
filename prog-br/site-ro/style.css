@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+header{
+    text-align: center;
+}
+  h1{
+    display: inline-block;
+    letter-spacing: 5px;
+    font-size: 90px;
+    font-family: 'Bebas Neue', cursive;
+    
+
+
+  }
+  h1#for{
+    display: block;
+    font-size: 100px;
+    margin-top: -40px;
+  }
