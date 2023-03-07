@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+  width: 725px;
+  height: 200px;
+  margin: auto;
+  background-image: url('../site-ro/imagens/logo\ nome_Prancheta\ 1.png');
+  background-position: center;
+  background-size: cover;
+  padding-top: 30px;
+}
+div.pre-apresentacao{
+  text-align: center;
+  color: rgb(63, 63, 63);
+  padding: 1px 0px 20px 0px;
+  border-bottom: 1px solid black;
+  width: 1000px;
+  margin: auto;
+}
+div.menu{
+  padding: 10px;
+  width: 1000px;
+  margin: auto;
+}
+div.menu > a{
+  text-decoration: none;
+  padding: 10px;
+  font-size: 16px;
+  color: rgb(156, 156, 156);
+}
+div.menu > a:hover{
+  color: black;
+  transition: 0.5s;
+}
+div.projetos{
+  background-color: rgb(179, 179, 179);
+  padding-top: 50px;
+  
+  height: 1000px;
+  width: 1000px;
+  margin: auto;
+
+}
+div.projeto{
+  display: inline-block;
+  background-color: rgb(88, 88, 88);
+  width: 245px;
+  height: 80px;
+  margin: 2px;
+  margin: auto;
+  
+  
+  
+}
+div.foto {
+  width: 245px;
+  height: 330px;
+  background-image: url("imagens/COLORADO\ PB.png");
+  background-size: cover; 
+}
+div.vigor{
+  background-image: url("imagens/vigor\ pb.png");
+  background-size: cover;
+}
+
+
+h2{
+  width: 245px;
+  font-weight: 100;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 20px;
+  color: grey;
+  background-color: rgb(192, 192, 192);
+  padding-bottom: 20px;
+  
+  
+}
