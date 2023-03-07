@@ -44,9 +44,11 @@ div.projetos{
   background-color: rgb(255, 252, 252);
   padding-top: 50px;
   
-  height: 1000px;
+  height: 600px;
   width: 1000px;
   margin: auto;
+  border-bottom: 1px solid black;
+  
 
 }
 div.projeto{
@@ -58,7 +60,6 @@ div.projeto{
   margin: auto;
   
   
-  
 }
 div.foto {
   width: 245px;
@@ -66,9 +67,46 @@ div.foto {
   background-image: url("imagens/COLORADO\ PB.png");
   background-size: cover; 
 }
+div.foto:hover{
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.402);
+
+}
+
+
+div.col:hover{
+  background-image: url("imagens/COLORADO\ COR.png");
+  background-size: cover;
+  transition: 0.3s;
+}
 div.vigor{
   background-image: url("imagens/vigor\ pb.png");
   background-size: cover;
+  
+}
+div.vigor:hover{
+  background-image: url("imagens/vigor\ cor.png");
+  background-size: cover;
+  transition: 0.3s;
+}
+div.hav{
+  background-image: url("imagens/havaianas\ pb.png");
+  background-size: cover;
+}
+div.hav:hover{
+  background-image: url("imagens/havaianas\ cor.png");
+  background-size: cover;
+  transition: 0.3s;
+}
+div.per{
+  background-image: url("imagens/pernambucanas\ pb.png");
+  background-size: cover;
+  background-position: center right;
+}
+div.per:hover{
+  background-image: url("imagens/pernambucanas\ cor.png");
+  background-size: cover;
+  background-position: center right;
+  transition: 0.3s;
 }
 
 
@@ -81,6 +119,54 @@ h2{
   color: grey;
   background-color: rgb(192, 192, 192);
   padding-bottom: 20px;
-  
+}
+div.footer{
+  text-align: center;
+  padding: 20px 0px 20px 0px
+}
+div.footer > p {
+  font-size: 12px;
+  color: rgb(114, 114, 114);
   
 }
+
+/* aqui começa as config da segunda pagina */
+
+div.sobre{
+  padding: 80px 50px 80px 50px;
+  
+  width: 1000px;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid black;
+}
+
+img.perfil{
+  width: 350px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 50px;
+  margin-left: 130px;
+}
+h1.textsob{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+  margin: 0px 0px 10px 0px;
+  
+}
+p.textsob{
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 300px;
+  text-align: justify;
+  line-height: 24px;
+  
+}
+div.textsobre > a {
+  text-decoration: none;
+  color: black;
+  
+}
+
+
