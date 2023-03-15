@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+div.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: gray;
+    max-width: 1000px;
+    height: 600px;
+    margin: auto;
+}
+
+div.foto{
+    
+    background-color: black;
+    width: 438px;
+    height: 200px;
+    
+}
+div.sobre{
+
+    background-color: rgb(255, 0, 0);
+    width: 438px;
+    height: 200px;
+}
+
