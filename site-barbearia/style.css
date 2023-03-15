@@ -14,7 +14,8 @@
     background-image: url(./imagens/Vetor-Logotipo-p.jpg);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
+    
 }
 img.icon{
     width: 40px;
@@ -23,16 +24,25 @@ img.icon{
     padding: 10px; 
 }
 main{
-    height: 1200px;
+    height: 2200px;
     max-width: 1000px;
-    background-color: rgb(182, 182, 182);
+    background-color: rgb(255, 255, 255);
     margin: auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.089);
+    padding-top: 10px;
 }
 div.link{
-    background-color: #CF3639;
+    background-color:#FDCF17;
     text-align: center;
     padding: 10px;
+    margin-top: 10px;
+    border-radius: 25px;
+    box-sizing: border-box;
+    max-width: 950px;
+    margin: auto;
 }
+
+
 img#cale{
     display: inline-block;
     width: 25px;
@@ -42,18 +52,101 @@ a#agendtop{
     color: rgb(255, 255, 255);
     color: black;
     text-decoration: none;
-    font-size: 32px;
+    font-size: 32px;  
+}
+a#agendtop:hover{
+    color: white;
+    transition: 0.3s;
+}
+
+
+div.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    background-color: rgb(255, 255, 255);
+    max-width: 1000px;
+    padding: 20px;
     
 }
-div.fotol{
-    display: inline-block;
-    background-color: rgb(189, 114, 24);
-    padding: 40px;
-}
-div.snos{
-    display: inline-block;
+
+div.foto{
+    background-color: black;
     width: 438px;
-    padding: 40px;
-    background-color: bisque;
+    height: 600px;
+    background-image: url(./imagens/fotolcort\ \(2\).jpeg);
+    border-radius: 5%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.37);
+    margin-bottom: 15px;
 }
+
+div.sobre{
+    background-color: #ffffff;
+    width: 438px;
+    height: 600px;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 5%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.37)
+}
+
+h2{
+    color: #CF3639;
+}
+
+p.so{
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+p.links{
+    margin-top: 40px;
+    line-height: 25px;
+}
+
+p.links > a {
+    text-decoration: none;
+    color: black;
+    
+}
+
+div.horarios{
+    background-color: #000000;
+    height: 400px;
+    max-width: 1000px;
+    margin-top: 10px;
+    background-image: url(./imagens/Peb.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    padding-top: 50px;
+    
+}
+
+div.hora{
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.774);
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+h3{
+    color: white;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+div.hora > p{
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
 
