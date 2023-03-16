@@ -7,14 +7,26 @@
     <title>forms</title>
 </head>
 <body>
-    <h1>meu primeiro fomormulario</h1>
-    <form>
-        <p><label for="iname">nome:</label>
-             <input type="text" name="iname" id="iname"> </p>
-        <p><label for="isobrenome">Sobrenome</label>
-             <input type="text" name="isobrenome" id="isobrenome"></p>
-        <p><input type="submit" value="enviar"></p>
-    </form>
+    <h1>formulario de treino para aula guanabara </h1>
     
+    <form action="#">
+        <p>
+            <label for="inome">Nome:</label>
+            <input type="text" name="nome" id="inome" required>
+        </p>
+        <p>
+            <label for="imedia">Média</label>
+            <input type="number" name="media" id="imedia" min="0" max="10" >
+        </p>
+        <p>
+            <label for="imes">Periodo letivo</label>
+            <input type="month" name="mes" id="imes">
+        </p>
+        <p>
+            <input type="submit" value="enviar">
+            <input type="reset" value="apagar">
+        </p>
+
+    </form>
 </body>
 </html>
