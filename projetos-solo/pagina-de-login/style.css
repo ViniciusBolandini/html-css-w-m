@@ -7,20 +7,24 @@
 
 body{
     background-color: #FAFC42;
-    position: relative;
+    padding:100px;
+    padding-top: 150px;
 }
 
 
 
 div#box{
-    position: absolute;
     background-color: #AD5CFF;
     height: 500px;
     width: 400px;
-    right: 50%;
-    bottom: 50%;
-
-    transform: translate(-50%,-50%);
+    float: right;
     
+}
+
+h1{
+    text-align: center;
+    margin-top: 25px;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
 }
 
