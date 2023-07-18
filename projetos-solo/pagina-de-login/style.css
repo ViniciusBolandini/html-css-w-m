@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #FAFC42;
+    position: relative;
+}
+
+
+
+div#box{
+    position: absolute;
+    background-color: #AD5CFF;
+    height: 500px;
+    width: 400px;
+    right: 50%;
+    bottom: 50%;
+
+    transform: translate(-50%,-50%);
+    
+}
+
