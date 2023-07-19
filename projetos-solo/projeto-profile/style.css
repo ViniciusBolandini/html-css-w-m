@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+main{
+    background-color: lightblue;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+div#principal{
+    width: 500px;
+    height: 600px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%,-50%);
+
+    border-radius: 15px;
+
+
+}
