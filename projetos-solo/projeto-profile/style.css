@@ -6,7 +6,7 @@
 }
 
 main{
-    background-color: lightblue;
+    background-color: #f4f4f4;
     width: 100vw;
     height: 100vh;
     position: relative;
@@ -22,7 +22,57 @@ div#principal{
 
     transform: translate(-50%,-50%);
 
-    border-radius: 15px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    
+}
 
+div#azul{
+    background-color:rgb(77, 77, 250) ;
+    border-radius: 20px 20px 0px 0px;
+    padding: 20px 0px 0px 0px;
+    height: 120px;
+    margin-bottom: 40px;
+}
+
+div#f{
+    display: block;
+    width: 163px;
+    height: 159px;
+    background-color: rgb(77, 77, 250);
+    border-radius: 50%;
+   
+    
+
+    margin: auto;
+    
+}
+
+img#foto{
+    display: block;
+    width: 150px;
+    border-radius: 50%;
+    border: 3px solid rgb(255, 255, 255);
+
+    margin: auto;
+    
+}
+
+
+
+h1{
+    text-align: center;
+    font-weight: 300;
+    color: rgb(43, 43, 43);
+    margin-bottom: 5px;
 
 }
+
+h2{
+    text-align: center;
+    font-weight: 300;
+    color: rgb(77, 77, 77);
+    font-size: 16px;
+
+}
+
