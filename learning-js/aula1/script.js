@@ -1,6 +1,4 @@
-var a,b;
-b="oi";
-a="olaaaa";
-a=b;
-console.log(a)
-console.log(b)
+var str="ola ";
+str=str + "tudo bem.";
+
+console.log(str);
