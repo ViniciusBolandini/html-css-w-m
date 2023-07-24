@@ -1,5 +1,5 @@
 var a,b;
-b="o";
+b="oi";
 a="olaaaa";
 a=b;
 console.log(a)
