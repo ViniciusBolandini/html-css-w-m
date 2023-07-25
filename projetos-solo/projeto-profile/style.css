@@ -76,3 +76,31 @@ h2{
 
 }
 
+div#social{
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+
+}
+
+a{
+    display: inline-flex;
+    text-decoration: none;
+    background-color: rgb(77, 77, 250);
+    margin: 0 8px;
+    padding: 3px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+a>img{
+    
+    border-radius: 50%;
+    width: 30px;
+    background-color: white;
+}
+
