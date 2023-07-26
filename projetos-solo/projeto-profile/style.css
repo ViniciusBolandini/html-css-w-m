@@ -14,8 +14,8 @@ main{
 
 div#principal{
     width: 500px;
-    height: 600px;
-    background-color: white;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
     position: absolute;
     left: 50%;
     top: 50%;
@@ -24,6 +24,8 @@ div#principal{
 
     border-radius: 20px;
     box-sizing: border-box;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.425);
     
 }
 
@@ -127,3 +129,12 @@ div#botao{
     transition: 0.3s;
 }
 
+div#anal{
+    text-align: center;
+}
+
+
+img.ic{
+    display: inline;
+    margin: 20px 15px 0px 0px;
+}
