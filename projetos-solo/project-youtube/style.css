@@ -5,7 +5,23 @@
     padding: 0px;
 }
 
+.video-preview{
+    display: inline-block;
+    width: 300px;
+    vertical-align: top;
+    
+}
+
 .thumbnail{
     width: 300px;
+}
 
+.video-name{
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.video-info{
+    color: rgb(73, 73, 73);
+    font-weight: 100;
 }

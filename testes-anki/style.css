@@ -1,31 +1,23 @@
-@charset "UTF-0";
+@charset "UTF-8";
 
-.profile-picture {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 25px;
-    vertical-align: middle;
-    margin-right: 5px;
-  }
+input{
+  border-radius: 8px;
+  outline: 0;
+  border: 1px solid gray;
+  padding: 10px;
   
-  .text-box {
-    font-size: 18px;
-    border: none;
-    width: 300px;
-    vertical-align: middle;
-  }
-  
-  .tweet-button {
-    background-color: rgb(29, 155, 240);
-    color: white;
-    border: none;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: bold;
-    vertical-align: middle;
-  }
+}
+
+.email{
+  display: block;
+  margin: 10px 0px;
+}
+
+button{
+display: block;
+background-color: rgb(48, 155, 255);
+color: white;
+padding: 10px 86px;
+border: none;
+border-radius: 8px;
+}
