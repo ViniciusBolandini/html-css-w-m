@@ -5,6 +5,8 @@
     padding: 0px;
 }
 
+/*parte cental do youtube*/
+
 .video-grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -62,4 +64,48 @@ p{
 
 .texto{
 
+}
+
+/*barra de cima onde fica a barra de pesquisa*/
+
+.cabe{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.esquerda{
+    display: flex;
+    height: 50px;
+    background-color: aqua;
+    width: 200px;
+    margin-right: 50px;
+    align-items: center;
+}
+
+.hamb{
+    height: 23px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.logo{
+    height: 20px;
+}
+
+.center{
+    flex: 1;
+    background-color: blueviolet;
+    margin-right: 100px;
+    max-width: 600px;
+}
+
+input{
+    outline: 0;
+}
+
+.direita{
+    height: 50px;
+    background-color: rgb(255, 0, 0);
+    width: 200px;
 }
