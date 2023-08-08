@@ -98,10 +98,34 @@ p{
     background-color: blueviolet;
     margin-right: 100px;
     max-width: 600px;
+    display: flex;
+    align-items: center;
 }
 
 input{
     outline: 0;
+    flex: 1;
+    padding: 10px;
+    border: 1px solid gray;
+    font-size: 16px;
+}
+
+.pesquisa{
+    width: 62px;
+    height: 40px;
+    border: 1px solid gray;
+    margin-right: 6px;
+}
+
+.iconss{
+    width: 25px;
+}
+
+.mic{
+    width: 41px;
+    height: 41px;
+    border: 1px solid gray;
+    border-radius: 50%;
 }
 
 .direita{
