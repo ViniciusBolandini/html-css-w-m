@@ -72,6 +72,7 @@ p{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    
 }
 
 .esquerda{
@@ -96,10 +97,11 @@ p{
 .center{
     flex: 1;
     background-color: rgb(255, 255, 255);
-    margin-right: 100px;
+    margin-right: 10px;
     max-width: 600px;
     display: flex;
     align-items: center;
+    
 }
 
 input{
@@ -135,6 +137,7 @@ input{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     margin-right: 20px;
 }
 
@@ -142,7 +145,7 @@ input{
     width: 41px;
     height: 41px;
     border: none;
-    margin-right: 20px;
+    
     background-color: white;
 }
 
