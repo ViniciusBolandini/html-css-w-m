@@ -201,5 +201,12 @@ input{
     left: 0px;
     bottom: 0px;
     width: 75px;
-    
+}
+
+.sidebar-box{
+    height: 76px;  
+}
+
+.sidebar-box:hover{
+    background-color: rgb(235, 235, 235);
 }
