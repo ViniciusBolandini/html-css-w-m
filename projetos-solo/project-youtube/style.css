@@ -195,18 +195,32 @@ input{
 /* side bar*/
 
 .sidebar{
-    background-color: aquamarine;
+    background-color: rgb(255, 255, 255);
     position: fixed;
     top: 50px;
     left: 0px;
     bottom: 0px;
     width: 75px;
+    z-index: 200;
 }
 
 .sidebar-box{
     height: 76px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .sidebar-box:hover{
     background-color: rgb(235, 235, 235);
+}
+
+.sidebar-box img{
+    height: 24px;
+    margin-bottom: 10px;
+}
+
+.sidebar-box p{
+    font-size: 11px;
 }
