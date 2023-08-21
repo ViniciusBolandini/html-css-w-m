@@ -142,6 +142,22 @@ input{
     margin-right: 6px;
 }
 
+
+.pesquisa div{
+    background-color: grey;
+    position: absolute;
+    padding: 5px 10px;
+    bottom: -25px;
+    color: white;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.pesquisa:hover div{
+    opacity: 1;
+}
+
 .iconss{
     width: 25px;
 }
