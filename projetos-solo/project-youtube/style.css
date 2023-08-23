@@ -8,6 +8,7 @@
 body{
 padding-top: 80px;
 padding-left: 100px;
+padding-right: 40px;
 background-color: rgba(250, 250, 250, 0.884);
 }
 
@@ -18,6 +19,24 @@ background-color: rgba(250, 250, 250, 0.884);
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 16px;
     row-gap: 40px;
+}
+
+@media (max-width: 1000px){
+    .video-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1700px){
+    .video-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 2000px){
+    .video-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
 }
 
 p{
