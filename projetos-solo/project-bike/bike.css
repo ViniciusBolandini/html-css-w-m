@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    background-color: blueviolet;
+}
+
+.centro{
+    background-color: rgb(207, 54, 54);
+}
