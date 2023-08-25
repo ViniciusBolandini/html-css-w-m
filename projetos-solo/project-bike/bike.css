@@ -6,9 +6,27 @@
 }
 
 header{
-    background-color: blueviolet;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100px;
+    border: 1px solid black;
 }
 
+.esquerda{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.esquerda img{
+    width: 15px;
+    background-color: white;
+}
+.menu{
+    background-color: white;
+    padding: 5px 10px;
+    color: rgb(110, 110, 110);
+}
 .centro{
     background-color: rgb(207, 54, 54);
 }
