@@ -44,4 +44,24 @@ header{
 .fixed{
     background-color: #F5821F;
     height: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.motos_menu{
+    
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    padding: 20px 30px;
+    width: 250px;
+}
+
+.motos_menu:hover{
+    font-size: 18px;
+}
+
+a{
+    text-decoration: none;
 }
