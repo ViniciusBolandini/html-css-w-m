@@ -1,15 +1,11 @@
-var nota1;
-var nota2;
+var nota= new Array();
 var media;
 
-nota1=parseInt(prompt("qual a nota1?"));
-nota2=parseInt(prompt("qual a nota2?"));
+nota[0]=prompt("qual seu nome");
+
+console.log(nota[0]);
 
 
 
-media = (nota1+nota2)/2;
 
-if(media > 7){
-    alert("voce passou, sua media e:" + media);
-}
-else alert("voce nao passou, sua media e:" + media);
+
