@@ -1,8 +1,13 @@
+var nomes = ["vinicus","igor","roberta"];
+var notasA = [7.0, 8.6, 9.5];
+var notasB = [8.4 , 9.2, 5.1];
 
-function media(n1,n2){
-    var media = (n1+n2)/2;
-    return media
+
+function media (nA,nB){
+var media = (nA+nB)/2;
+    return media;
 }
 
-
-console.log(media(7,5));
+for(var i=0;i<nomes.length;i++){
+    console.log(nomes[i]+" notaA :" + notasA[i]+ " notaB :"+notasB[i]+ " media: "+ media(notasA[i],notasB[i]));
+}

@@ -3,7 +3,6 @@
 *{
     margin: 0px;
     padding: 0px;
-    font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 header{
@@ -75,10 +74,6 @@ a{
     object-position: center;
 }
 
-section{
-    padding: 0px 400px;
-}
-
 @media (max-width: 1500px){
     .baner img{
         width: 100%;
@@ -94,20 +89,4 @@ section{
         justify-content: center;
         
     }
-    section{
-        padding: 0px 30px;
-    }
 }   
-
-
-.titu{
-    font-size: 30px;
-    font-weight: 700;
-    margin: 10px 0px;
-}
-
-.conteudo p.para{
-    font-size: 18px;
-    line-height: 25px;
-    text-align: justify;
-}
