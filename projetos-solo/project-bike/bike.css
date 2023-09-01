@@ -99,6 +99,21 @@ section{
     }
 }   
 
+.rodape{
+    background-color: #F5821F;
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 50px;
+}
+.rodape a:visited{
+    color: #ffffff;
+}
+.rodape a:hover{
+    text-decoration: underline;
+}
+
 
 .titu{
     font-size: 30px;
@@ -110,4 +125,11 @@ section{
     font-size: 18px;
     line-height: 25px;
     text-align: justify;
+}
+
+.imgamor{
+    margin: 10px 0px 20px 0px;
+    object-fit: cover;
+    height: 400px;
+    width: 100%;
 }
