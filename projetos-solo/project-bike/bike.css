@@ -48,6 +48,10 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: sticky;
+    right: 0px;
+    left: 0px;
+    top: 0px;
 }
 
 .motos_menu{
