@@ -75,16 +75,17 @@ a{
 }
 
 section{
+    margin-top: -4px;
     padding: 0px 10px;
 }
 
 .rodape{
     background-color: #F5821F;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     color: #ffffff;
     font-size: 18px;
-    margin-top: 50px;
+    margin-top: -2px;
 }
 
 @media (max-width: 1500px){
@@ -102,8 +103,16 @@ section{
         justify-content: center;
         
     }
-
+    section{
+        padding: 0px 5px;
+    }
 }   
+
+@media (min-width: 1500px){
+    section{
+        padding: 0px 150px;
+    }
+}
 
 .conteudo{
     display: grid;
@@ -112,7 +121,7 @@ section{
     column-gap: 30px;
     row-gap: 30px;
     justify-content: center;
-    padding: 10px;
+    padding: 40px 10px 40px 10px;
     align-items: center;
 }
 
