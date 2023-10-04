@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+section{
+    background-image: url(2693171.jpg);
+    background-position: center center;
+    width: 100vw;
+    height: 100vh;
+}
