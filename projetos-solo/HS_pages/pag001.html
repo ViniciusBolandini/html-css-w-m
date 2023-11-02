@@ -7,15 +7,74 @@
 </head>
 <body>
     <style>
-        div{
-            background-color: black;
+        .container{
+            display: flex;
+            flex-direction: row;
+            column-gap: 15px;
+            background-color: rgba(0, 0, 0, 0.371);
         }
+        .esquerda{
+            flex: 2;
+        }
+        .baner{
+            background-color: aqua;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .navegacao{
+            background-color: bisque;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            padding: 10px;
+            column-gap: 5px;
+            row-gap: 5px;
+            margin-bottom: 10px;
+        }
+        .navs{
+            background-color: cadetblue;
+            text-align: center;
+            padding: 10px;
+            border-radius: 15px;
+        }
+        .dados{
+            background-color: rgb(112, 112, 216);
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .noticias{
+            background-color: blue;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .direita{
+            background-color: rgba(228, 207, 248, 0.114);
+            flex: 1;
+        }
+        .usuario{
+            background-color: deeppink;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
     </style>
 
-    <div class="baner">x</div>
-    <div class="navegacao">x</div>
-    <div class="noticias">x</div>
-    <div class="lateral">x</div>
+    <div class="container">
+        <div class="esquerda">
+            <div class="baner">baner</div>
+            <div class="navegacao">
+                <div class="navs">COMERCIAL</div>
+                <div class="navs">GENTE E GESTÃO</div>
+                <div class="navs">TREINAMENTO</div><div class="navs">GARANTIA DA RECEITA</div><div class="navs">LOGÍSTICA</div><div class="navs">MARKETING</div><div class="navs">FINANCEIRO</div><div class="navs">TECNOLOGIA DA INFORMAÇÃO</div>
+            </div>
+            <div class="dados">power bi</div>
+            <div class="noticias">noticias</div>
+        </div>
+        <div class="direita">
+            <div class="usuario">user</div>
+            <div class="usuario">comunicados</div>
+            <div class="usuario">central de tarefas</div>
+        </div>
+    </div>
     
 </body>
 </html>
