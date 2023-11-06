@@ -6,12 +6,74 @@
     <title>JS training</title>
 </head>
 <body>
-    <script src="script.js">
+    <script>
+        let maquina;
+        let jogador = '';
+        function escolhaMaquina(){
+            const num = Math.random();
+            if(num<=0.33){
+                maquina = 'pedra';
+            }
+            else if(num>0.33 && num<=0.66){
+                maquina = 'papel';
+            }
+            else{
+                maquina = 'tesoura';
+            }
+        }
+
+        function jogo(jogador){
+            if(jogador === 'pedra'){
+                if(maquina === 'tesoura'){
+                    alert('voce : pedra\nmaquina : '+ maquina + '\nvoce ganhou');
+                }
+                if(maquina === 'pedra'){
+                    alert('voce : pedra\nmaquina : '+ maquina + '\nvoce empatou');
+                }
+                if(maquina === 'papel'){
+                    alert('voce : pedra\nmaquina : '+ maquina + '\nvoce perdeu');
+                }
+            }
+            else if(jogador === 'papel'){
+                if(maquina === 'pedra'){
+                    alert('voce : papel\nmaquina : '+ maquina + '\nvoce ganhou');
+                }
+                if(maquina === 'papel'){
+                    alert('voce : papel\nmaquina : '+ maquina + '\nvoce empatou');
+                }
+                if(maquina === 'tesoura'){
+                    alert('voce : papel\nmaquina : '+ maquina + '\nvoce perdeu');
+                }
+            }
+            else{
+                 if(maquina === 'papel'){
+                    alert(`voce : ${jogador}\nmaquina : ${maquina}\nvoce venceu`);
+                }
+                if(maquina === 'tesoura'){
+                    alert(`voce : ${jogador}\nmaquina : ${maquina}\nvoce empatou`);
+                }
+                if(maquina === 'pedra'){
+                    alert(`voce : ${jogador}\nmaquina : ${maquina}\nvoce perdeu`);
+                }
+            }
+        }
+
     </script>
-    
+
     <button onclick="
-         
-    ">aperter aqui</button>
-    
+        escolhaMaquina();
+        jogo('pedra');
+    ">pedra</button>
+
+    <button onclick="
+        escolhaMaquina();
+        jogo('papel');
+    ">papel</button>
+
+    <button onclick="
+        escolhaMaquina();
+        jogo('tesoura');
+    ">tesoura</button>
+
 </body>
 </html>
