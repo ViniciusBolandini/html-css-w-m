@@ -9,6 +9,11 @@
     <script>
         let maquina;
         let jogador = '';
+        let placar = {
+            vitoria : 0 ,
+            derrota : 0 ,
+            empates : 0 
+        };
         function escolhaMaquina(){
             const num = Math.random();
             if(num<=0.33){
@@ -25,37 +30,61 @@
         function jogo(jogador){
             if(jogador === 'pedra'){
                 if(maquina === 'tesoura'){
-                    alert('voce : pedra\nmaquina : '+ maquina + '\nvoce ganhou');
+                    placar.vitoria++;
+
+                    alert(`voce : pedra\nmaquina : ${maquina} \nvoce ganhou\n\nvitoria : ${placar.vitoria} derrota : ${placar.derrota} empate : ${placar.empates}`)
+
                 }
                 if(maquina === 'pedra'){
-                    alert('voce : pedra\nmaquina : '+ maquina + '\nvoce empatou');
+                    placar.empates++;
+
+                    alert('voce : pedra\nmaquina : '+ maquina + '\nvoce empatou'+`\n\nvitoria : ${placar.vitoria} derrota : ${placar.derrota} empate : ${placar.empates}`);
                 }
                 if(maquina === 'papel'){
-                    alert('voce : pedra\nmaquina : '+ maquina + '\nvoce perdeu');
+                    placar.derrota++;
+
+                    alert('voce : pedra\nmaquina : '+ maquina + '\nvoce perdeu'+`\n\nvitoria : ${placar.vitoria} derrota : ${placar.derrota} empate : ${placar.empates}`);
                 }
             }
             else if(jogador === 'papel'){
                 if(maquina === 'pedra'){
-                    alert('voce : papel\nmaquina : '+ maquina + '\nvoce ganhou');
+                    placar.vitoria++;
+
+                    alert('voce : papel\nmaquina : '+ maquina + '\nvoce ganhou'+`\n\nvitoria : ${placar.vitoria} derrota : ${placar.derrota} empate : ${placar.empates}`);
                 }
                 if(maquina === 'papel'){
-                    alert('voce : papel\nmaquina : '+ maquina + '\nvoce empatou');
+                    placar.empates++;
+
+                    alert('voce : papel\nmaquina : '+ maquina + '\nvoce empatou'+`\n\nvitoria : ${placar.vitoria} derrota : ${placar.derrota} empate : ${placar.empates}`);
                 }
                 if(maquina === 'tesoura'){
-                    alert('voce : papel\nmaquina : '+ maquina + '\nvoce perdeu');
+                    placar.derrota++;
+
+                    alert('voce : papel\nmaquina : '+ maquina + '\nvoce perdeu'+`\n\nvitoria : ${placar.vitoria} derrota : ${placar.derrota} empate : ${placar.empates}`);
                 }
             }
             else{
                  if(maquina === 'papel'){
-                    alert(`voce : ${jogador}\nmaquina : ${maquina}\nvoce venceu`);
+                    placar.vitoria++;
+
+                    alert(`voce : ${jogador}\nmaquina : ${maquina}\nvoce venceu`+`\n\nvitoria : ${placar.vitoria} derrota : ${placar.derrota} empate : ${placar.empates}`);
                 }
                 if(maquina === 'tesoura'){
-                    alert(`voce : ${jogador}\nmaquina : ${maquina}\nvoce empatou`);
+                    placar.empates++;
+
+                    alert(`voce : ${jogador}\nmaquina : ${maquina}\nvoce empatou`+`\n\nvitoria : ${placar.vitoria} derrota : ${placar.derrota} empate : ${placar.empates}`);
                 }
                 if(maquina === 'pedra'){
-                    alert(`voce : ${jogador}\nmaquina : ${maquina}\nvoce perdeu`);
+                    placar.derrota++;
+                    alert(`voce : ${jogador}\nmaquina : ${maquina}\nvoce perdeu`+`\n\nvitoria : ${placar.vitoria} derrota : ${placar.derrota} empate : ${placar.empates}`);
                 }
             }
+        }
+
+        function reset(){
+            placar.vitoria=0;
+            placar.derrota=0;
+            placar.empates=0;
         }
 
     </script>
@@ -74,6 +103,10 @@
         escolhaMaquina();
         jogo('tesoura');
     ">tesoura</button>
+
+    <button onclick="
+        reset();
+    ">reset</button>
 
 </body>
 </html>
