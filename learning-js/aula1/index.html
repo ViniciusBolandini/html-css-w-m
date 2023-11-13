@@ -9,11 +9,8 @@
     <script>
         let maquina;
         let jogador = '';
-        let placar = {
-            vitoria : 0 ,
-            derrota : 0 ,
-            empates : 0 
-        };
+        let placar = JSON.parse(localStorage.getItem('placar'));
+
         function escolhaMaquina(){
             const num = Math.random();
             if(num<=0.33){
@@ -79,12 +76,17 @@
                     alert(`voce : ${jogador}\nmaquina : ${maquina}\nvoce perdeu`+`\n\nvitoria : ${placar.vitoria} derrota : ${placar.derrota} empate : ${placar.empates}`);
                 }
             }
+
+            localStorage.setItem('placar', JSON.stringify(placar));
+
         }
 
         function reset(){
             placar.vitoria=0;
             placar.derrota=0;
             placar.empates=0;
+
+            localStorage.setItem('placar', JSON.stringify(placar));
         }
 
     </script>
