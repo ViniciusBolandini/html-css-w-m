@@ -304,11 +304,11 @@ def plotar_dois_graficos(x1, y1, x2, y2):
     plt.show()
 
 # Exemplo de dados para os dois gráficos
-dados_x1 = ['Selectionttt', 'Bubblettt', 'Insertionttt', 'Shellttt', 'Mergettt','Quickttt','Countingttt']
-dados_y1 = [10, 24, 15, 30, 20, 30, 20]
+dados_x1 = ['Selection', 'Bubble', 'Insertion', 'Shell', 'Merge','Quick','Counting']
+dados_y1 = [tempoSelection, tempoBubble, tempoInsertion, tempoShell, tempoMerge, tempoQuick, tempoCounting]
 
-dados_x2 = ['Item A', 'Item B', 'Item C', 'Item D', 'Item E']
-dados_y2 = [15, 22, 18, 25, 30]
+dados_x2 = ['Selection', 'Bubble', 'Insertion', 'Shell', 'Merge','Quick','Counting']
+dados_y2 = [10, 24, 15, 30, 20, 30, 20]
 
 # Chamar a função para plotar os dois gráficos
 
