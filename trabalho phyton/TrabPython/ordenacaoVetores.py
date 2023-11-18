@@ -3,11 +3,23 @@ import random
 import time
 import pickle
 import os
+#impot do vini
+import matplotlib.pyplot as plt
+import numpy as np
+#vini
 
 # VARIÁVEIS GLOBAIS
 vetorPequeno = [0]
 vetorMedio   = [0]
 vetorGrande  = [0]
+
+tempoSelection = 0
+tempoBubble = 0
+tempoInsertion = 0
+tempoShell = 0
+tempoMerge = 0
+tempoQuick = 0
+tempoCounting = 0
 
 # 7 MÉTODOS DE ORDENAR OS VETORES
 
@@ -24,6 +36,7 @@ def selectionSort(lista):
 
         (lista[step], lista[min_idx]) = (lista[min_idx], lista[step])
     fim = time.time()
+    tempoSelection = fim - inicio
     janela['tempo1'].update(fim - inicio)
     janela['trocas1'].update(trocas)
     return lista
@@ -41,6 +54,7 @@ def bubbleSort(lista):
                 ordenado = False
                 trocas += 1
     fim = time.time()
+    tempoBubble = fim - inicio
     janela['tempo2'].update(fim - inicio)
     janela['trocas2'].update(trocas)
     return lista
@@ -57,6 +71,7 @@ def insertionSort(lista):
             trocas += 1
         lista[j + 1] = chave
     fim = time.time()
+    tempoInsertion = fim - inicio
     janela['tempo3'].update(fim - inicio)
     janela['trocas3'].update(trocas)
     return lista
@@ -77,6 +92,7 @@ def shellSort(lista):
             lista[j] = temp
         interval //= 2
     fim = time.time()
+    tempoShell = fim - inicio
     janela['tempo4'].update(fim - inicio)
     janela['trocas4'].update(trocas)
     return lista
@@ -103,6 +119,7 @@ def mergeSort(lista):
             lista[posicao_menor] = lista[posicao_atual]
             lista[posicao_atual] = menor_nome
     fim = time.time()
+    tempoMerge = fim - inicio
     janela['tempo5'].update(fim - inicio)
     janela['trocas5'].update(trocas)
     return lista
@@ -147,6 +164,7 @@ def countingSort(lista):
     for i in range(len(lista)):
         lista[i] = resultado[i]
     fim = time.time()
+    tempoCounting = fim - inicio
     janela['tempo7'].update(fim - inicio)
     janela['trocas7'].update(trocas)
     return lista
@@ -239,6 +257,7 @@ def lerEventos():
                 chamaFuncao(5, vetorPequeno.copy())
                 chamaFuncao(6, vetorPequeno.copy())
                 chamaFuncao(7, vetorPequeno.copy())
+                plotar_dois_graficos(dados_x1, dados_y1, dados_x2, dados_y2)
             elif eventos == 'Ordenar vetor médio':
                 chamaFuncao(1, vetorMedio.copy())
                 chamaFuncao(2, vetorMedio.copy())
@@ -247,6 +266,7 @@ def lerEventos():
                 chamaFuncao(5, vetorMedio.copy())
                 chamaFuncao(6, vetorMedio.copy())
                 chamaFuncao(7, vetorMedio.copy())
+                plotar_dois_graficos(dados_x1, dados_y1, dados_x2, dados_y2)
             elif eventos == 'Ordenar vetor grande':
                 chamaFuncao(1, vetorGrande.copy())
                 chamaFuncao(2, vetorGrande.copy())
@@ -255,8 +275,46 @@ def lerEventos():
                 chamaFuncao(5, vetorGrande.copy())
                 chamaFuncao(6, vetorGrande.copy())
                 chamaFuncao(7, vetorGrande.copy())
+                plotar_dois_graficos(dados_x1, dados_y1, dados_x2, dados_y2)
     except Exception as e:
         print(e)
+
+
+#codigo do vini
+def plotar_dois_graficos(x1, y1, x2, y2):
+    # Criar uma figura com duas sub-figuras (gráficos)
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 5))
+
+    # Gráfico 1
+    ax1.bar(x1, y1, color='blue')
+    ax1.set_title('Gráfico 1')
+    ax1.set_xlabel('Eixo X')
+    ax1.set_ylabel('Eixo Y')
+
+    # Gráfico 2
+    ax2.bar(x2, y2, color='green')
+    ax2.set_title('Gráfico 2')
+    ax2.set_xlabel('Eixo X')
+    ax2.set_ylabel('Eixo Y')
+
+    # Ajustar o layout para evitar sobreposição
+    plt.tight_layout()
+
+    # Exibir a janela com os dois gráficos
+    plt.show()
+
+# Exemplo de dados para os dois gráficos
+dados_x1 = ['Selectionttt', 'Bubblettt', 'Insertionttt', 'Shellttt', 'Mergettt','Quickttt','Countingttt']
+dados_y1 = [10, 24, 15, 30, 20, 30, 20]
+
+dados_x2 = ['Item A', 'Item B', 'Item C', 'Item D', 'Item E']
+dados_y2 = [15, 22, 18, 25, 30]
+
+# Chamar a função para plotar os dois gráficos
+
+#vini
+
+
 
 def main():
     os.system('cls')
