@@ -1,0 +1,55 @@
+
+        .container{
+            display: flex;
+            flex-direction: row;
+            column-gap: 15px;
+            
+        }
+        .esquerda{
+            flex: 2;
+        }
+        .baner{
+            background-color: aqua;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            height: 400px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.26);
+        }
+        .navegacao{
+            background-color: bisque;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            padding: 10px;
+            column-gap: 5px;
+            row-gap: 5px;
+            margin-bottom: 10px;
+        }
+        .navs{
+            background-color: cadetblue;
+            text-align: center;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.26);
+        }
+        .dados{
+            background-color: rgb(112, 112, 216);
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.26);
+        }
+        .noticias{
+            background-color: blue;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.26);
+        }
+        .direita{
+            background-color: rgba(228, 207, 248, 0.114);
+            flex: 1;
+        }
+        .usuario{
+            background-color: deeppink;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.26);
+        }
