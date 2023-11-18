@@ -21,6 +21,14 @@ tempoMerge = 0
 tempoQuick = 0
 tempoCounting = 0
 
+trocaSelection = 0
+trocaBubble = 0
+trocaInsertion = 0
+trocaShell = 0
+trocaMerge = 0
+trocaQuick = 0
+trocaCounting = 0
+
 # 7 MÉTODOS DE ORDENAR OS VETORES
 
 def selectionSort(lista):
@@ -39,6 +47,7 @@ def selectionSort(lista):
     tempoSelection = fim - inicio
     janela['tempo1'].update(fim - inicio)
     janela['trocas1'].update(trocas)
+    trocaSelection = trocas
     return lista
 
 def bubbleSort(lista):
@@ -57,6 +66,7 @@ def bubbleSort(lista):
     tempoBubble = fim - inicio
     janela['tempo2'].update(fim - inicio)
     janela['trocas2'].update(trocas)
+    trocaBubble = trocas
     return lista
 
 def insertionSort(lista):
@@ -74,6 +84,7 @@ def insertionSort(lista):
     tempoInsertion = fim - inicio
     janela['tempo3'].update(fim - inicio)
     janela['trocas3'].update(trocas)
+    trocaInsertion = trocas
     return lista
 
 def shellSort(lista):
@@ -95,6 +106,7 @@ def shellSort(lista):
     tempoShell = fim - inicio
     janela['tempo4'].update(fim - inicio)
     janela['trocas4'].update(trocas)
+    trocaShell = trocas
     return lista
 
 def mergeSort(lista):
@@ -122,6 +134,7 @@ def mergeSort(lista):
     tempoMerge = fim - inicio
     janela['tempo5'].update(fim - inicio)
     janela['trocas5'].update(trocas)
+    trocaMerge = trocas
     return lista
 
 def quickSort(lista, trocas = 0):
@@ -137,6 +150,7 @@ def quickSort(lista, trocas = 0):
         ordenados_maiores, trocas_maiores = quickSort(maiores, trocas)
         
         trocas = trocas_menores + trocas_maiores + len(menores) + len(maiores)
+        trocaQuick = trocas
         return ordenados_menores + [pivo] + ordenados_maiores, trocas
 
 def countingSort(lista):
@@ -167,6 +181,7 @@ def countingSort(lista):
     tempoCounting = fim - inicio
     janela['tempo7'].update(fim - inicio)
     janela['trocas7'].update(trocas)
+    trocaCounting = trocas
     return lista
 
 
@@ -308,7 +323,7 @@ dados_x1 = ['Selection', 'Bubble', 'Insertion', 'Shell', 'Merge','Quick','Counti
 dados_y1 = [tempoSelection, tempoBubble, tempoInsertion, tempoShell, tempoMerge, tempoQuick, tempoCounting]
 
 dados_x2 = ['Selection', 'Bubble', 'Insertion', 'Shell', 'Merge','Quick','Counting']
-dados_y2 = [10, 24, 15, 30, 20, 30, 20]
+dados_y2 = [trocaSelection, trocaBubble, trocaInsertion, trocaShell, trocaMerge, trocaQuick, trocaCounting]
 
 # Chamar a função para plotar os dois gráficos
 
