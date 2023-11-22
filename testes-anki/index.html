@@ -1,107 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrossel</title>
+  <style>
+    #carousel-container {
+      width: 300px;
+      overflow: hidden;
+    }
+
+    #image-container {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-image {
+      width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
-    <style>
-        html, body {
-  margin: 0;
-  height: 100%;
-  width: 100%;
-}
 
-/* sistema do fade */
-.carousel-fade .carousel-inner .item {
-  opacity: 0;
-  transition-property: opacity;
-}
-.carousel-fade .carousel-inner .active {
-  opacity: 1;
-}
-.carousel-fade .carousel-inner .active.left,
-.carousel-fade .carousel-inner .active.right {
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-}
-.carousel-fade .carousel-inner .next.left,
-.carousel-fade .carousel-inner .prev.right {
-  opacity: 1;
-}
-.carousel-fade .carousel-control {
-  z-index: 2;
-}
-
-.wrapper {
-    width: 80%; /* largura do slider */
-    margin: 0 auto;
-}
-.carousel .item {
-  height: 250px; /* altura do slider */
-}
-.item img { /* centraliza imagem na vertical no slider */
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-    </style>
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<div class="wrapper">
-<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-
-    <div class="item active">
-      <img src="download.jpeg" alt="Los Angeles" style="width:100%;">
-      <div class="carousel-caption">
-        <h3>Los Angeles</h3>
-        <p>LA is always so much fun!</p>
-      </div>
-    </div>
-
-    <div class="item">
-          <img src="perfil-de-cachorro.jpg" alt="Los Angeles" style="width:100%;">
-      <div class="carousel-caption">
-        <h3>Chicago</h3>
-        <p>Thank you, Chicago!</p>
-      </div>
-    </div>
-  
-    <div class="item">
-          <img src="webpc-passthru.webp" alt="Los Angeles" style="width:100%;">
-      <div class="carousel-caption">
-        <h3>New York</h3>
-        <p>We love the Big Apple!</p>
-      </div>
-    </div>
-
+<div id="carousel-container">
+  <div id="image-container">
+    <img class="carousel-image" src="https://castellobranco.sc.gov.br/uploads/sites/468/2022/10/Outubro-Rosa-Post-Feed-Para-Instagram-Rosa-e-Branco.png" alt="Image 1">
+    <img class="carousel-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr14vKRS15aKX6eYBjYOJuyc9QdR4RcAFF8voQJPZ9&s" alt="Image 2">
+    <img class="carousel-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpRJMCTW-42c-s9Xu0Y7eI4NMRl2ht8q4zKVyDqjg&s" alt="Image 3">
   </div>
+</div>
 
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-</div>
-    
+<script>
+  const imageContainer = document.getElementById('image-container');
+  let currentIndex = 0;
+
+  function showImage(index) {
+    const translateValue = -index * 100 + '%';
+    imageContainer.style.transform = `translateX(${translateValue})`;
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % 3;
+    showImage(currentIndex);
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + 3) % 3;
+    showImage(currentIndex);
+  }
+
+  setInterval(nextImage, 3000); // Auto scroll every 3 seconds
+</script>
+
+<div><h1>ola</h1></div>
+
 </body>
 </html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload de Imagens para Carrossel</title>
+  <style>
+    .carousel-image {
+      width: 100%;
+      height: auto;
+    }
+
+    .uploaded-image {
+      max-width: 100px;
+      max-height: 100px;
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<input type="file" id="imageInput" accept="image/*">
+<button onclick="uploadImage()">Upload</button>
+
+<div id="uploadedImages"></div>
+
+<div id="carousel-container">
+  <div id="image-container">
+    <img class="carousel-image" src="image1.jpg" alt="Image 1">
+    <img class="carousel-image" src="image2.jpg" alt="Image 2">
+    <img class="carousel-image" src="image3.jpg" alt="Image 3">
+  </div>
+</div>
+
+<script>
+  const imageInput = document.getElementById('imageInput');
+  const uploadedImagesContainer = document.getElementById('uploadedImages');
+  const imageContainer = document.getElementById('image-container');
+  let currentIndex = 0;
+
+  function showImage(index) {
+    const translateValue = -index * 100 + '%';
+    imageContainer.style.transform = `translateX(${translateValue})`;
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % imageContainer.children.length;
+    showImage(currentIndex);
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + imageContainer.children.length) % imageContainer.children.length;
+    showImage(currentIndex);
+  }
+
+  setInterval(nextImage, 3000); // Auto scroll every 3 seconds
+
+  function uploadImage() {
+    const fileInput = imageInput.files[0];
+    if (fileInput) {
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+        const imageUrl = e.target.result;
+
+        const imgElement = document.createElement('img');
+        imgElement.src = imageUrl;
+        imgElement.classList.add('uploaded-image');
+        imgElement.addEventListener('click', () => {
+          currentIndex = Array.from(imageContainer.children).indexOf(imgElement);
+          showImage(currentIndex);
+        });
+
+        uploadedImagesContainer.appendChild(imgElement);
+        imageContainer.appendChild(imgElement);
+        showImage(imageContainer.children.length - 1); // Show the newly added image
+      };
+
+      reader.readAsDataURL(fileInput);
+    }
+  }
+</script>
+
+</body>
+</html>
