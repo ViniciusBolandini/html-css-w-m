@@ -25,6 +25,9 @@
             margin-bottom: 10px;
         }
         .navs{
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background-color: #bfb8a3;
             text-align: center;
             font-weight: 600;
