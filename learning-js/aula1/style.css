@@ -1,0 +1,15 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.menu{
+    display: inline-block;
+    background-color: bisque;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.menu{
+    transition: 0.5s;
+}
