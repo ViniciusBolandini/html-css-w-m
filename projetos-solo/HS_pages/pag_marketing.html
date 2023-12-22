@@ -7,13 +7,16 @@
 </head>
 <body>
     <style>
+          @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
 
         *{
         padding: 0px;
         margin: 0px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Montserrat', sans-serif;
         }
 
+
+        
         .header{
         background-color: #bfb8a3;
         height: 100px; 
@@ -21,16 +24,29 @@
         align-items: center;
         justify-content: center;
         font-size: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
         }
 
         .container{
             display: grid;
             grid-template-columns: 1fr 1fr;
-            column-gap: 30px;
-            row-gap: 30px;
+            column-gap: 50px;
+            row-gap: 50px;
             margin: 30px;
+            padding: 10px 100px;
         }
+
+        @media (max-width: 1000px){
+            .container{
+                display: grid;
+                grid-template-columns: 1fr;
+                column-gap: 50px;
+                row-gap: 50px;
+                margin: 30px;
+                padding: 10px 10px;
+            }
+        }
+
         .case{
             background-color: rgb(255, 255, 255);
             display: flex;
@@ -52,6 +68,7 @@
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.26);
             padding: 10px 25px;
             width: 80%;
+            text-align: center;
         }
     </style>
      <div class="header">
@@ -60,31 +77,31 @@
     <div class="container">
         <div class="case">
             <h2>TRADE MARKETING</h2>
-            <div class="botoes">POSITIVAÇÕES (PAX/CICLO)</div>
-            <div class="botoes">ETIQUETAS DE PREÇO - APARELHOS</div>
-            <div class="botoes">ETIQUETAS DE PREÇO - ACESSÓRIOS</div>
-            <div class="botoes">ARTES PARA IMPRESSÃO</div>
+                <div class="botoes">Ciclo de Positivações</div>
+                <div class="botoes">Etiquetas de Preço - Aparelhos</div>
+                <div class="botoes">Etiquetas de Preço - Acessórios</div>
         </div>
         <div class="case">
             <h2>MARKETING</h2>
-            <div class="botoes">SOLICITAÇÃO DE ARTE</div>
-            <div class="botoes">OFERTAS PARA REDES SOCIAIS</div>
-            <div class="botoes">MARKETING DIGITAL</div>
+                <div class="botoes">Solicitações de Arte</div>
+                <div class="botoes">Banco de Artes</div>
+                <div class="botoes">Marketing Digital</div>
         </div>
         <div class="case">
             <h2>ENDOMARKETING</h2>
-            <div class="botoes">ASSINATURA DE EMAIL</div>
-            <div class="botoes">TEMPLATE DE APRESENTAÇÕES</div>
-            <div class="botoes">BRAND BOOK E LOGOS</div>
+                <div class="botoes">Assinatura de Email</div>
+                <div class="botoes">Template de Apresentações</div>
+                <div class="botoes">Brand Book e Logos</div>
+                <div class="botoes">Tela de Fundo</div>
         </div>
         <div class="case">
             <h2>INTELIGÊNCIA DE MERCADO</h2>
-            <div class="botoes">POWER BI - SOUDI</div>
-            <div class="botoes">POWER BI - PAYJOY</div>
-            <div class="botoes">POWER BI - PITZI</div>
-            <div class="botoes">POWER BI - CLARO PROTEÇÃO</div>
-            <div class="botoes">POWER BI - TROCA FONE</div>
-            <div class="botoes">POWER BI - HS DIGITAL</div>
+                <div class="botoes">Power BI - SOUDI</div>
+                <div class="botoes">Power BI - PAYJOY</div>
+                <div class="botoes">Power BI - PITZI</div>
+                <div class="botoes">Power BI - CLARO PROTEÇÃO</div>
+                <div class="botoes">Power BI - TROCA FONE</div>
+                <div class="botoes">Power BI - HS DIGITAL</div>
         </div>
     </div>
 
