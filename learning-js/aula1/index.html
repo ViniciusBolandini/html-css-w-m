@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>javascipt</title>
+    <title>Redirecionamento de Links</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="container">
+        <form id="redirectForm">
+            <label for="numeroInput">Digite um número (1 ou 2):</label>
+            <input type="text" id="numeroInput" name="numero" required>
+            <button type="button" onclick="redirecionar()">Submit</button>
+        </form>
+    </div>
+
     <script src="script.js"></script>
-
-
-
-
-
 </body>
 </html>
