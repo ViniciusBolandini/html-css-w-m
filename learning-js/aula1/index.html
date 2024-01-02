@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecionamento de Links</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>js</title>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <div class="container">
-        <form id="redirectForm">
-            <label for="numeroInput">Digite um número (1 ou 2):</label>
-            <input type="text" id="numeroInput" name="numero" required>
-            <button type="button" onclick="redirecionar()">Submit</button>
-        </form>
-    </div>
+    <h1>SOMADOR</h1>
+    <p>
+    <input type="number" name="n1" id="n1">
+    +
+    <input type="number" name="n2" id="n2">
+    <button onclick="somar()">somar</button>
+    = <strong id="resp"></strong>
+    </p>
 
     <script src="script.js"></script>
 </body>

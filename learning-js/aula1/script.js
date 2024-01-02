@@ -1,14 +1,14 @@
-function redirecionar() {
-    // Obter o valor do input
-    var numero = document.getElementById('numeroInput').value;
+function somar(){
+    var n1;
+    var n2;
+    var res;
+    var resposta;
+    n1 = document.getElementById('n1').value;
+    n2 = document.getElementById('n2').value;
+    res = parseInt(n1) + parseInt(n2);
+    
+    
+    resposta = document.getElementById('resp');
+    resposta.innerText = res;
 
-    // Verificar se o valor é 1 ou 2 e redirecionar para os URLs correspondentes
-    if (numero === '1') {
-        let li = 'https://www.youtube.com/@equacionamatematica/playlists';
-        window.location.href = li;
-    } else if (numero === '2') {
-        window.location.href = 'https://pt.stackoverflow.com/questions/241203/como-alterar-o-href-de-um-link-de-forma-din%C3%A2mica';
-    } else {
-        alert('Por favor, digite apenas 1 ou 2.');
-    }
 }
