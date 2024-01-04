@@ -6,13 +6,23 @@
     <title>js work</title>
 </head>
 <body>
-    <form action="">
+    <form action="" id="for">
         <input type="radio" name="sexo" id="m" value="mulher">
         <label for="m">mulher</label>
 
         <input type="radio" name="sexo" id="ma" value="homem">
         <label for="ma">homem</label>
+        <br>
+        <label for="sobre">sobrenome</label>
+        <input type="text" name="sobre" id="sobre">
+        <button onclick="pegar()">enviar</button>
         
     </form>
+    <script>
+        function pegar(){
+            let sexo = document.getElementById('for').value;
+            console.log(sexo);
+        }
+    </script>
 </body>
 </html>
