@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: rgb(104, 193, 196);
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        .bloco{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            background-color: white;
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        button{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        .nick{
+            position: relative;
+            bottom: -50px;
+        }
+        
+        label{
+            margin-bottom: 15px;
+        }
+        input{
+            margin-bottom: 15px;
+        }
+
+        #para{
+            text-align: center;
+        }
+        h1{
+            margin-bottom: 15px;
+        }
+        
+        </style>
+        <div class="bloco">
+            <h1>Tabuada</h1>
+            <label for="inp">Tabuada do:</label>
+            <input type="text" id="inp" onclick="limpar()">
+            <button onclick="calcular()">calcular</button>
+            <div id="res">
+
+            </div>
+
+
+        </div>
+    <script>
+        function limpar(){
+            let resp = document.getElementById('res');
+            resp.innerHTML = '';
+        }
+        function calcular(){
+            let num = document.getElementById('inp').value;
+            let n = parseInt(num);
+            let resp = document.getElementById('res');
+            resp.innerHTML = '';
+
+            for(var i = 0; i <= 10; i++){
+                let r = document.createElement('p');
+                r.innerText = `${n} x ${i} = ${n*i}`;
+                resp.appendChild(r);
+            }
+        }
+    </script>
+</body>
+</html>
