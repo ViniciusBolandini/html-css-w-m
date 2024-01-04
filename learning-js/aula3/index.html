@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    <style>
+        #bloco{
+            background-color: aquamarine;
+        }
+    </style>
+    <button onclick="rep(5)">add</button>
+    <div id="bloco">
+        <p>ola</p>
+    </div>
+    <script>
+        function add(){
+            var np = document.createElement('p');
+            console.log(np);
+            np.innerText = 'ola mundo';
+            var di = document.getElementById('bloco');
+            di.appendChild(np);
+        }
+        function rep(n){
+            console.log(n);
+            while(n>0){
+                add();
+                n--;
+            }
+        }
+
+
+
+
+    </script>
+</body>
+</html>

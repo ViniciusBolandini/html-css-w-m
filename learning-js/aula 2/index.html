@@ -6,23 +6,122 @@
     <title>js work</title>
 </head>
 <body>
-    <form action="" id="for">
-        <input type="radio" name="sexo" id="m" value="mulher">
-        <label for="m">mulher</label>
+<style>
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: rgb(104, 193, 196);
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.bloco{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    padding: 25px;
+    border-radius: 20px;
+}
+button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.nick{
+    position: relative;
+    bottom: -50px;
+}
+.radio{
+    margin-top: 10px;
+}
+#foto{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+div.foto{
+    text-align: center;
+}
+#para{
+    text-align: center;
+}
 
-        <input type="radio" name="sexo" id="ma" value="homem">
-        <label for="ma">homem</label>
+</style>
+<div class="bloco">
+    <label for="txt">Ano de nascimento:</label>
+    <input type="text" id="txt">
+    <div class="radio">
+        Sexo:
+        <input type="radio" name="sexo" id="sexom">
+        <label for="sexom">Feminino</label>
+        <input type="radio" name="sexo" id="sexomas">
+        <label for="sexomas">Masculino</label>
         <br>
-        <label for="sobre">sobrenome</label>
-        <input type="text" name="sobre" id="sobre">
-        <button onclick="pegar()">enviar</button>
+        <button onclick="verificar()">verificar</button>
+    </div>
+    <p id="para">Preencha os dados acima para ver o resultado</p>
+    <div class="foto"><img src="perfilsemfoto.jpg" alt="" id="foto"></div>
+    <p class="nick">@viniciusthre</p>
+</div>
+<script>
+    function verificar(){
+        let datanas = document.getElementById('txt').value;
+        let dtnas = parseInt(datanas);
+        let dt_atual = new Date();
+        let idade = dt_atual.getFullYear() - dtnas;
+        let txt = document.getElementById('para');
+        let genero;
+        let imagem;
         
-    </form>
-    <script>
-        function pegar(){
-            let sexo = document.getElementById('for').value;
-            console.log(sexo);
-        }
-    </script>
+
+        let res = document.getElementsByName('sexo');
+        if(res[0].checked == false && res[1].checked == false || datanas =='' || idade<=0){
+            alert('Preencha corretamente os campos');
+        } else{
+                if(res[0].checked){
+                    genero = 'Mulher';
+                    txt.innerText = `${genero} com ${idade} anos.`;
+                    if(idade <= 12){
+                        imagem = document.getElementById('foto');
+                        imagem.src = 'criancawoman.jpg';
+                    }
+                    if(idade >= 12 && idade <=18){
+                        imagem = document.getElementById('foto');
+                        imagem.src = 'adolewoman.jpg';
+                    }
+                    if(idade >18){
+                        imagem = document.getElementById('foto');
+                        imagem.src = 'adultowoman.jpg';
+                    }
+                }
+                else{
+                    genero = 'Homem';
+                    txt.innerText = `${genero} com ${idade} anos.`;
+                    if(idade <= 12){
+                        imagem = document.getElementById('foto');
+                        imagem.src = 'criancaman.jpg';
+                    }
+                    if(idade >= 12 && idade <=18){
+                        imagem = document.getElementById('foto');
+                        imagem.src = 'adoleman.jpg';
+                    }
+                    if(idade >18){
+                        imagem = document.getElementById('foto');
+                        imagem.src = 'adultoman.jpg';
+                    }
+                } 
+            }       
+        
+    }
+
+    
+
+</script>
 </body>
 </html>
