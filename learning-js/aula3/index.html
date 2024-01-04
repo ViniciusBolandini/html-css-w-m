@@ -7,33 +7,120 @@
 </head>
 <body>
     <style>
-        #bloco{
-            background-color: aquamarine;
+        *{
+            margin: 0px;
+            padding: 0px;
         }
-    </style>
-    <button onclick="rep(5)">add</button>
-    <div id="bloco">
-        <p>ola</p>
-    </div>
+        body{
+            background-color: rgb(104, 193, 196);
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        .bloco{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            background-color: white;
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        button{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        .nick{
+            position: relative;
+            bottom: -50px;
+        }
+        
+        label{
+            margin-bottom: 15px;
+        }
+        input{
+            margin-bottom: 15px;
+        }
+
+        #para{
+            text-align: center;
+        }
+        h1{
+            margin-bottom: 10px;
+        }
+        
+        </style>
+        <div class="bloco">
+            <h1>Contador</h1>
+            <label for="inicio">Inicio:</label>
+            <input type="text" id="inicio"> <br>
+            <label for="fim">Fim:</label>
+            <input type="text" id="fim" style="margin-left: 10px;"> <br>
+            <label for="inicio">Passo:</label>
+            <input type="text" id="passo"> <br>
+
+            <button onclick="contar()">Contar</button>
+            <button onclick="limpar()">Limpar</button>
+            <p id="para">Preencha os dados acima para ver o resultado</p>
+            <p class="nick">@viniciusthre</p>
+        </div>
     <script>
-        function add(){
-            var np = document.createElement('p');
-            console.log(np);
-            np.innerText = 'ola mundo';
-            var di = document.getElementById('bloco');
-            di.appendChild(np);
+        function limpar(){
+            let inicio = document.getElementById('inicio');
+            inicio.value = '';
+            let fim = document.getElementById('fim');
+            fim.value = '';
+            let passo = document.getElementById('passo');
+            passo.value = '';
+            let rep = document.getElementById('para');
+            rep.innerHTML = 'Preencha os dados acima para ver o resultado';
         }
-        function rep(n){
-            console.log(n);
-            while(n>0){
-                add();
-                n--;
+
+        function escreve(i,f,p){
+            let rep = document.getElementById('para');
+            rep.innerHTML = '';
+            if(i < f){
+                for(var x = i; x <= f ; x = x + p){
+                rep.innerHTML = rep.innerHTML + x;
+                rep.innerHTML = rep.innerHTML +' - ';
+                }
+                rep.innerHTML = rep.innerHTML +'&#127937';
+            }
+            else{
+                for(var x = i; x >= f ; x = x - p){
+                rep.innerHTML = rep.innerHTML + x;
+                rep.innerHTML = rep.innerHTML +' - ';
+                }
+                rep.innerHTML = rep.innerHTML +'&#127937';
+            }
+
+        }
+
+        function contar(){
+            //pega o inicio
+            let inicio = document.getElementById('inicio').value;
+            
+            //pega o fim
+            let fim = document.getElementById('fim').value;
+            
+             //pega o fim
+            let passo = document.getElementById('passo').value;
+
+            if(inicio == '' || fim == '' || passo == ''){
+                alert('Preencha corretamente os campos');
+            }
+            else{
+            inicio = parseInt(inicio);
+            fim = parseInt(fim);
+            passo = parseInt(passo); 
+
+            if(passo <= 0){
+                passo = 1;
+            }
+            escreve(inicio,fim,passo);
             }
         }
-
-
-
-
     </script>
 </body>
 </html>
