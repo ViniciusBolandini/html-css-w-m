@@ -3,20 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>java script</title>
+    <title>js</title>
 </head>
 <body>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            background-color: rgb(104, 193, 196);
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        .bloco{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        #dados{
+            margin-bottom: 10px;
+        }
+        h1{
+            margin-bottom: 5px;
+        }
+        hr{
+            margin-bottom: 10px;
+        }
+        #entrada{
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        input{
+            padding: 3px;
+            border: 1px solid rgba(0, 0, 0, 0.507);
+            
+        }
+        .botoes{
+            width: 100px;
+            height: 25px;
+            margin-bottom: 15px;
+            background-color: rgb(104, 193, 196);
+            border: none;
+        }
+        .botoes:hover{
+            background-color: rgba(104, 193, 196, 0.877);
+        }
+
+
+        </style>
+        <div class="bloco">
+
+            <h1>Analisando numeros</h1>
+            <hr>
+            <p id="entrada">
+                <label for="inp">Numero (entre 1 e 100)</label> <br>
+                <input type="text" id="inp" onclick="limpar()" placeholder="Numero">
+            </p>
+
+            <button class="botoes" id="but" onclick="adicionar()">adicionar</button>
+
+            <button class="botoes" id="but3" onclick="limpart()">limpar tudo</button>
+
+            <div id="dados">
+                <p></p>
+            </div>
+
+            <button  class="botoes" id="but2" onclick="analizar()">analizar</button>
+
+            <div>
+                <p id="analise"></p>
+            </div>
+
+        </div>
     <script>
-        function parouimpar(n){
-            if(n%2 == 0){
-                return 'par';
+
+        var vet = [];
+
+        function limpart(){
+            let num = document.getElementById('inp');
+            num.value = '';
+            let res = document.getElementById('analise');
+            res.innerText = '';
+            let dados = document.getElementById('dados');
+            dados.innerHTML = '';
+
+
+        }
+
+        function limpar(){
+            let num = document.getElementById('inp');
+            num.value = '';
+        }
+
+        function adicionar(){
+            let num = document.getElementById('inp').value;
+            let res = document.getElementById('analise');
+            res.innerText = '';
+            if(num == '' || parseInt(num) < 1 || parseInt(num) > 100 ){
+                alert('preencha corretamente os campos!');
             }
             else{
-                return 'impar';
+                n = parseInt(num);
+                vet.push(n);
+                let dados = document.getElementById('dados');
+                let dado = document.createElement('p');
+                dado.innerText = `Valor ${n} adicionado...`;
+                dados.appendChild(dado);
+            }
+
+        }
+
+        function soma(){
+            let s = 0;
+            for(let i = 0 ; i < vet.length ; i++){
+                s = vet[i] + s;
+            }
+            return s;
+        }
+
+        function media(){
+            let s = soma();
+            let m = s/vet.length;
+            return m;
+        }
+
+        function analizar(){
+            let res = document.getElementById('analise');
+            let num = document.getElementById('inp').value;
+            if(num == '' || parseInt(num) < 1 || parseInt(num) > 100 ){
+                alert('preencha corretamente os campos!');
+            }
+            else{
+                vet.sort();
+                let max = vet.length - 1;
+                let s = soma();
+                let med = media();
+                res.innerText = `total de valores:${vet.length} \nMaior valor:${vet[max]} \nMenor valor:${vet[0]} \nSoma dos valores:${s} \nMedia dos valores:${med}`
             }
         }
-        let res = parouimpar(8);
-        console.log(res);
     </script>
 </body>
 </html>
