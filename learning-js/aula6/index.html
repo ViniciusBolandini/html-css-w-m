@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG C/ MENU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js"></script>
+    <div id="asidemenu" onclick="escondemenu()"></div>
+    <header>
+        
+        <div id="menu">
+            <div class="headermenu">
+                <p id="logomenu">BLOG</p><span onclick="escondemenu()">&#60</span>
+            </div>
+            <hr>
+            <a href="">
+                <div class="botoes">Notícias</div>
+            </a>
+            <a href="">
+                <div class="botoes">Links</div>
+            </a>
+            <a href="">
+                <div class="botoes">Projetos</div>
+            </a>
+            <a href="">
+                <div class="botoes">Fotos</div>
+            </a>
+            <a href="">
+                <div class="botoes">Vídeos</div>
+            </a>
+            <a href="">
+                <div class="botoes">Coleção</div>
+            </a>
+            <a href="">
+                <div class="botoes">Publicar notícia</div>
+            </a>
+        </div>
+        <div id="iconemenu"><p id="pmenu" onclick="abrirmenu()">=</p></div>
+        <h1>BLOG</h1>
+    </header>
+    
+    <main>
+        <h3>notícia</h3>
+        <div class="conteudo">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto quia architecto debitis sed ea. Eius distinctio nam alias asperiores culpa autem ratione aut natus, possimus doloribus. Accusamus nulla quo amet.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto quia architecto debitis sed ea. Eius distinctio nam alias asperiores culpa autem ratione aut natus, possimus doloribus. Accusamus nulla quo amet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, architecto, molestias error ut sunt sint numquam officia corrupti ipsum quos repellendus laboriosam aliquam, quia qui? Corrupti dolorem amet cupiditate illo?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto quia architecto debitis sed ea. Eius distinctio nam alias asperiores culpa autem ratione aut natus, possimus doloribus. Accusamus nulla quo amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsam dolores hic, itaque vero rem corporis. Tempore esse nemo tenetur expedita? Aut ut quae atque exercitationem magnam accusantium facilis sint?</p>
+        </div>
+    </main>
+    <div id="publi">
+
+        <h2>Publicar notícia</h2>
+        <div id="close">╳</div>
+        <br>
+
+        <label for="inptitulo">Título:</label>
+        <br>
+        <input type="text" id="inptitulo">
+        <br>
+        <label for="inpnoticia">Conteudo:</label>
+        <br>
+        <textarea name="inpnoticia" id="inpnoticia" cols="30" rows="10"></textarea>
+        <br>
+        <button id="butpubli">Plublicar</button>
+
+    </div>
+</body>
+</html>

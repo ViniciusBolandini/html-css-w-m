@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    height: 100px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.331);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+h1{
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    width: 33.33vw;
+    text-align: center;
+}
+
+#menu{
+    background-color: rgb(255, 255, 255);
+    display: none;
+    width: 280px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.378);
+}
+
+#asidemenu{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.218);
+    display: none;
+    
+}
+
+#iconemenu{
+    font-size: 40px;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    width: 33.33vw;
+
+}
+
+#pmenu{
+    margin-left: 15px;
+    background-color: rgb(255, 255, 255);
+    display: inline;
+    padding: 4px;
+}
+
+#pmenu:hover{
+    cursor: pointer;
+}
+
+main{
+    padding: 20px;
+    margin: auto;
+    max-width: 1000px;
+}
+
+
+.headermenu{
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 50%;
+    font-size: 25px;
+}
+
+#logomenu{
+    display: inline-block;
+    margin-left: 10px;
+}
+span{
+    text-align: end;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+}
+span:hover{
+    cursor: pointer;
+}
+
+.botoes{
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(152, 152, 152);
+    padding: 15px 0px 15px 10px;
+    color: black;
+}
+.botoes:hover{
+    background-color: rgb(232, 232, 232);
+}
+
+a{
+    text-decoration: none;
+}
+
+@media screen and (max-width= ""){
+    main{
+
+    }
+}
+
+/* quadro de publicaçao ---------------*/
+
+#publi{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    padding: 20px;
+    width: 60%;
+    max-width: 500px;
+    border-radius: 15px;
+}
+
+#close{
+    position: relative;
+    display: inline-block;
+    left: 95%;
+    top: -25px;
+    background-color: aqua;
+    padding: 4px;
+}
