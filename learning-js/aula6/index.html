@@ -34,9 +34,9 @@
             <a href="">
                 <div class="botoes">Coleção</div>
             </a>
-            <a href="">
-                <div class="botoes">Publicar notícia</div>
-            </a>
+            
+                <div class="botoes" onclick="abrepublicador()">Publicar notícia</div>
+            
         </div>
         <div id="iconemenu"><p id="pmenu" onclick="abrirmenu()">=</p></div>
         <h1>BLOG</h1>
@@ -53,7 +53,7 @@
     <div id="publi">
 
         <h2>Publicar notícia</h2>
-        <div id="close">╳</div>
+        <div id="close" onclick="verificasefecha()">╳</div>
         <br>
 
         <label for="inptitulo">Título:</label>
