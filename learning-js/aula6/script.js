@@ -42,4 +42,13 @@ function verificasefecha(){
 function publicar(){
     let inptitulo = document.getElementById('inptitulo');
     let inpnoticia = document.getElementById('inpnoticia');
+    let mainnot = document.getElementById('mainnot');
+    var h3n = document.createElement('h3');
+    h3n.innerText = inptitulo.value;
+    mainnot.appendChild(h3n);
+    let divconteudo = document.createElement('div');
+    divconteudo.innerText = inpnoticia.value;
+    mainnot.appendChild(divconteudo);
+
+    fechapublicador();
 }

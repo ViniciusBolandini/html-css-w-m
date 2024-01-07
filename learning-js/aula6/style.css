@@ -66,6 +66,9 @@ main{
     max-width: 1000px;
 }
 
+.conteudo{
+    margin-bottom: 25px;
+}
 
 .headermenu{
     height: 100px;
