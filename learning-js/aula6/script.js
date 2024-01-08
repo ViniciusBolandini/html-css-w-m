@@ -8,12 +8,15 @@ function abrirmenu(){
 function escondemenu(){
     let publicador = document.getElementById('publi');
 
-    if(publicador.style.display == 'none'){
+    if(publicador.style.display == "inline-block"){
+        console.log(1);
+    }
+    else{
         let divmenu = document.getElementById('menu');
         divmenu.style.display = 'none';
         let asidemenu = document.getElementById('asidemenu');
-        asidemenu.style.display = 'none';
-    }
+        asidemenu.style.display = 'none'; 
+    }   
 }
 
 function abrepublicador(){
@@ -21,6 +24,12 @@ function abrepublicador(){
     publicador.style.display = 'inline-block';
     let divmenu = document.getElementById('menu');
     divmenu.style.display = 'none';
+
+    let inptitulo = document.getElementById('inptitulo');
+    let inpnoticia = document.getElementById('inpnoticia');
+    inptitulo.value = '';
+    inpnoticia.value = '';
+
 }
 
 function fechapublicador(){
@@ -48,6 +57,7 @@ function publicar(){
     mainnot.appendChild(h3n);
     let divconteudo = document.createElement('div');
     divconteudo.innerText = inpnoticia.value;
+    divconteudo.classList = 'conteudo'
     mainnot.appendChild(divconteudo);
 
     fechapublicador();
