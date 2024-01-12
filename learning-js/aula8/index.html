@@ -6,31 +6,145 @@
     <title>testes
     </title>
 </head>
-<body>
+<body onload="rodaprograma()">
     <style>
-        .qg{
-            background-color: antiquewhite;
-            width: 400px;
-            height: 400px;
-            display: inline-block;
-            position: relative;
+        *{
+            padding: 0px;
+            margin: 0px;
         }
-        #qp{
-            position: absolute;
-            height: 60px;
-            width: 60px;
-            border-radius: 50%;
-            top: 350px;
-            left: 175px;
-            text-align: center;
-            display: none;
+        body{
+            background-color: antiquewhite;
+        }
+        .container{
+            background-color: white;
+            padding: 10px;
+            display: inline-block;
+            border-radius: 15px;
+        }
+        p{
+            border-bottom: 1px solid rgba(0, 0, 0, 0.333);
         }
     </style>
-    <div class="qg">
-        <div id="qp">
+
+    <div class="container">
+        <h2>cadastro:</h2>
+        <input type="text" placeholder="nome" id="nomep"> <br>
+        <label for="datanas">nascimento:</label> <br>
+        <input type="date" placeholder="" id="datanas">
+        <button onclick="cadastrar()">cadastrar</button>
+    </div>
+    <div class="container">
+        <h2>lista de cadastrados:</h2>
+        <div id="lista">
+        </div>
+        
+    </div>
+    <div class="container">
+        <h2>aniversariantes:</h2>
+        <div id="listan">
+            
         </div>
     </div>
+
+    
     <script>
+        var vet = [
+            {
+                nome:'Roberta',
+                dn:'2000-01-05'
+            },
+
+            {
+                nome:'vinicius',
+                dn:'1999-01-11'
+            }
+        ]
+
+        function colocadados(){
+            for(let i = 0; i<vet.length; i++){
+                let divp = document.getElementById('lista');
+                let dados = document.createElement('p');
+                dados.innerHTML = `            <p><strong>${vet[i].nome}</strong> <br>${vet[i].dn}</p>`;
+                divp.appendChild(dados);
+                
+
+                let datanas = vet[i].dn;
+                let dia = datanas[8] + datanas[9];
+                let mes = datanas[5] + datanas[6];
+                let dat = new Date();
+                let diatual = dat.getDate();
+                let mestual = (dat.getMonth())+1;
+
+                console.log(diatual);
+                console.log(parseInt(mes));
+                
+                dia = parseInt(dia);
+                mes = parseInt(mes);
+
+                if( diatual == dia && mestual == mes ){
+        
+                    let divani = document.getElementById('listan');
+
+                    console.log(divani);
+
+                    let niver = document.createElement('p');
+                    niver.innerHTML = ` <p>${vet[i].nome}</p>`;
+                    divani.appendChild(niver);
+                }
+
+            }
+        }
+
+        function rodaprograma(){
+           colocadados();
+        }
+
+        function cadastrar(){
+            let datanas = document.getElementById('datanas').value;
+            let nomep = document.getElementById('nomep').value;
+            vet.push({nome: nomep , dn: datanas})
+
+            let divp = document.getElementById('lista');
+            let dados = document.createElement('p');
+            dados.innerHTML = `            <p><strong>${nomep}</strong> <br>${datanas}</p>`;
+            divp.appendChild(dados);
+            
+
+            
+                let dia = datanas[8] + datanas[9];
+                let mes = datanas[5] + datanas[6];
+                let dat = new Date();
+                let diatual = dat.getDate();
+                let mestual = (dat.getMonth())+1;
+
+                console.log(diatual);
+                console.log(parseInt(mes));
+                
+                dia = parseInt(dia);
+                mes = parseInt(mes);
+
+            if( diatual == dia && mestual == mes ){
+                
+                let divani = document.getElementById('listan');
+
+                console.log(divani);
+
+                let niver = document.createElement('p');
+                niver.innerHTML = ` <p>${nomep}</p>`;
+                divani.appendChild(niver);
+            }
+
+        }
+
+        function clicou(){
+            let datanas = document.getElementById('datanas').value;
+            let dia = datanas[8] + datanas[9];
+            let mes = datanas[5] + datanas[6];
+            let dat = new Date();
+            let diatual = dat.getDate();
+            let mestual = (dat.getMonth())+1;
+            console.log(mestual);
+        }
 
     </script>
 
