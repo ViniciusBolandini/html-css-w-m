@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perfil</title>
+</head>
+<body>  
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+
+        *{
+            padding: 0px;
+            margin: 0px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body{
+            background-color: black;
+        }
+
+        #two{
+            
+        }
+
+        .card{
+            width: 375px;
+            height: 667px;
+            background-image: url("imagem/neutra.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 15px;
+        }
+
+        .imagem > img {
+            width: 200px;
+            border-radius: 50%;
+        }
+        .imagem{
+            text-align: center;
+            padding: 50px 0px 0px 0px;
+            margin: 0px 0px 0px 0px;
+        }
+        .info{
+            padding: 0px 0px 0px 20px;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .links1{
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0px 20px;
+            row-gap: 10px;
+            margin-bottom: 20px;
+        }
+        .but1 > img{
+            width: 30px;
+        }
+
+        .but1{
+            background: linear-gradient( to left,#023859,#023859);
+            flex-grow: 1;
+            padding: 15px 20px;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .but1:hover{
+            background: linear-gradient( to left,#023859,#05C7F2);
+        }
+
+        .links2{
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 0px 20px;
+            row-gap: 10px;
+        }
+
+        .but2{
+            background: linear-gradient( to left,#05C7F2,#023859);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 3px;
+        }
+
+        .but2:hover{
+            background: linear-gradient( to left,#023859,#05C7F2);
+        }
+
+        .but2 > img{
+            width: 30px;
+        }
+
+        .info > h3{
+            margin: 10px 0px;
+        }
+
+        .pass{
+            color:#023859;
+        }
+        .pass:hover{
+            color:#05C7F2;
+            cursor: pointer;
+        }
+
+        #dir{
+            position: absolute;
+            top: calc(50% - 50px);
+            left: 105%;
+            font-size: 100px;
+        }
+        #esq{
+            position: absolute;
+            top: calc(50% - 50px);
+            right: 105%;
+            font-size: 100px;
+        }
+
+        @media (max-width: 750px){
+            #dir{
+            position: absolute;
+            top: calc(50% - 50px);
+            left: 105%;
+            font-size: 50px;
+        }
+        #esq{
+            position: absolute;
+            top: calc(50% - 50px);
+            right: 105%;
+            font-size: 50px;
+        }
+        }
+
+    </style>
+        <div class="card" id="one">
+            <div id="esq" class="pass" onclick="rodar()">&#60 </div>
+            <div id="dir" class="pass" onclick="rodar()">></div>
+            <div class="imagem">
+                <img src="imagem/perfil-foto.jfif" alt="">
+            </div>
+            <div class="info">
+                <h1>@viniciusthre</h1>
+                <p>Sistemas de informaçao, UNESP, HTML e CSS, JavaScript, C.</p>
+                <h3>Sobre:</h3>
+                <p>Meu nome é Vinícius, tenho 24 anos e atualmente sou estudante do curso de Sistemas de Informação na Universidade Estadual Paulista (UNESP). Estou muito entusiasmado em aplicar meus conhecimentos e habilidades adquiridos durante meus estudos em um ambiente prático, por meio de uma oportunidade de estágio.</p>
+            </div>
+            
+            <div class="links2">
+                <div class="but2">
+                    <img src="imagem/mensagem-de-telefone.png" alt="">
+                </div>
+                <div class="but2">
+                   <img src="imagem/o-email (1).png" alt="">
+                </div>
+                <div class="but2">
+                    <img src="imagem/whatsapp (2).png" alt="">
+                </div>
+            </div>
+        </div>
+
+    <div class="card" id="two">
+        <div class="imagem">
+            <img src="imagem/perfil-foto.jfif" alt="">
+        </div>
+        <div class="info">
+            <h1>@viniciusthre</h1>
+            <p>Sistemas de informaçao, UNESP, HTML e CSS, JavaScript, C.</p>
+        </div>
+        <div class="links1">
+                <div class="but1">
+                    <span>Instagram</span><img src="imagem/instagram (3).png" alt="">
+                </div>
+                <div class="but1">
+                    <span>Youtube</span><img src="imagem/logotipo-do-youtube.png" alt="">
+                </div>
+                <div class="but1">
+                    <span>Linkedin</span><img src="imagem/logotipo-do-linkedin.png" alt="">
+                </div>
+        </div>
+        <div class="links2">
+            <div class="but2">
+                <img src="imagem/mensagem-de-telefone.png" alt="">
+            </div>
+            <div class="but2">
+               <img src="imagem/o-email (1).png" alt="">
+            </div>
+            <div class="but2">
+                <img src="imagem/whatsapp (2).png" alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+        function rodar(){
+            let two = document.getElementById('two');
+            if(two.style.display == 'none'){
+                two.style.display = 'block';
+            }
+            else{
+                two.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
