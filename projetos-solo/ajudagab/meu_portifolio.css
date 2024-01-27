@@ -2,3 +2,21 @@
     margin: 0px;
     padding: 0px;
 }
+header{
+    background-color: aqua;
+    display: flex;
+    padding: 10px;
+}
+main{
+    background-color: bisque;
+}
+.inicioheader{
+    background-color: blueviolet;
+    display: flex;
+    column-gap: 10px;
+}
+.fimheader{
+    background-color: rgb(149, 132, 165);
+    display: flex;
+    column-gap: 10px;
+}
