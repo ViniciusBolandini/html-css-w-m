@@ -15,8 +15,13 @@
 </head>
 <body>
     <header>
+
+        <div id="menu">
+
+        </div>
+
         <div class="inicioheader">
-            <div class="menu"> <img src="menu.png" alt=""> </div>
+            <div class="menu" onclick="menu()"> <img src="menu.png" alt=""> </div>
             <div class="logo"> <img src="logo.png" alt=""> </div>
 
             <a href="#">
@@ -40,7 +45,7 @@
 
         <div class="container">
             <div class="buscatag">
-                <input type="text" name="" id="" placeholder="Buscar tags">
+                <input type="text" name="" id="buscarTags" placeholder="Buscar tags">
             </div>
             
             <div class="exibirprojetos">
@@ -54,7 +59,16 @@
     </main>
 
     <script>
+        function menu(){
+            let divmenu = document.getElementById('menu');
+            if(divmenu.style.display == 'none'){
+                divmenu.style.display = 'block';
+            }
+            else{
+                divmenu.style.display = 'none';
+            }
 
+        }
     </script>
 </body>
 </html>
