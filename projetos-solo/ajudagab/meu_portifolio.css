@@ -17,26 +17,70 @@ header{
     box-sizing: border-box;
     padding: 16px 30px;
     height: 73px;
-    
     justify-content: space-between;
-    
 }
 
+/* div Menu */
 #menu{
     position: absolute;
-    width: 150px;
-    height: 200px;
-    background-color: burlywood;
+    width: 220px;
+    background-color: rgb(255, 255, 255);
     top: 73px;
     left: 0px;
+    box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.247);
+    border-radius: 5px;
+    display: block;
+    padding-top: 5px;
     display: none;
 }
 
-main{
-    padding: 0px 30px;
+/* espaço que mostra as informações do usuário dentro do menu*/
+.informacoes{
+    padding: 6px 16px;
+    height: 68px;
+    border-bottom: 1px solid rgb(228, 228, 228);
+    margin-bottom: 10px;
 }
+
+/*div que possui os dois botes do menu, o de Meus projetos e o Descobrir */
+.infoMenu{
+    border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+/* configuração dos links que envolvem os botões do menu*/
+.infoMenu > a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+/* configuração dos botoes do menu*/
+.butinfoMenu{
+    margin-bottom: 8px;
+    padding: 6px 16px;
+}
+
+/* configuração da div do botão de sair que fica no menu*/
+.sair{
+    padding: 6px 16px;
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    height: 50px;
+}
+
+/* configuração do icone do Botão de sair*/
+.sair > img{
+    width: 24px;
+}
+
+/* configuração do da tag main da página*/
+main{
+    padding: 112px 20px 30px 20px;
+}
+
+/* configuração da div que possui os elementos do início do header*/
 .inicioheader{
-    
     display: flex;
     column-gap: 0px;
     justify-content: center;
@@ -46,13 +90,15 @@ main{
     color: white;
     height: 41px;
 }
+
+/* configuração da div que possui o logo do header*/
 .logo{
     width: 111px;
     height: 41px;
     margin-right: 100px;
-    
 }
 
+/* div que possui o icone de menu*/
 .menu{
     display: flex;
     justify-content: center;
@@ -60,43 +106,49 @@ main{
     display: none;
 }
 
+/* configuração do icone de menu*/
 .menu > img{
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
 
+/* configuração da imagem da logo*/
 .logo > img{
     width: 111px;
     height: 41px;
 }
 
+/* configuração do botao de projetos exposto no header*/
 .botaoprojetos{
-    
     margin-right: 24px;
     text-align: center;
 }
 
+/* configuração do botao de Descobrir exposto no header*/
 .descobrir{
     text-align: center;
 }
 
+/* configuração  da div que fica no fim do header*/
 .fimheader{
-    
     display: flex;
     column-gap: 10px;
     height: 41px;
 }
 
+/* configuração da imagem do perfil do usuario*/
 .foto > img{
     width: 40px;
     border-radius: 50%;
 }
 
+/* configuração do icone de notificação*/
 .notificacao > img{
     width: 40px;
     border-radius: 50%;
 }
+
 
 @media (max-width: 650px){
     .menu{
@@ -130,6 +182,7 @@ main{
 
 }
 
+/* configuração do texto principal do main*/
 .texto{
     padding: 0px 20px;
     font-size: 34px;
@@ -137,7 +190,6 @@ main{
     font-weight: 400;
     max-width: 744px;
     margin: auto;
-    margin-top: 112px;
     text-align: center;
     margin-bottom: 120px;
 }
@@ -150,16 +202,19 @@ main{
         font-weight: 400;
         max-width: 744px;
         margin: auto;
-        margin-top: 112px;
+        
         text-align: center;
         margin-bottom: 35px;
+        
     }
 }
 
+/* configuração configuração da div que possui o input de buscar tag*/
 .buscatag{
     margin-bottom: 25px;
 }
 
+/* configuração do input de buscar tag*/
 .buscatag > input{
     padding: 10px 5px;
     outline: none;
@@ -183,11 +238,11 @@ main{
 }
 
 .container{
-    
     max-width: 1800px;
     margin: auto;
 }
 
+/* configuração da div que e pai das divs que vão exibir os projetos*/
 .exibirprojetos{
     display: flex;
     flex-direction: row;
@@ -196,6 +251,7 @@ main{
     column-gap: 15px;
 }
 
+/* configuração da div que vai receber os projetos*/
 .projeto{
     background-color: rgb(204, 204, 204);
     height: 290px;

@@ -14,40 +14,68 @@
     <link rel="stylesheet" href="meu_portifolio.css">
 </head>
 <body>
+    
+     <!-- início do HTMl -->
     <header>
 
+        <!-- menu da pagina mobile -->
         <div id="menu">
-
+            <!-- exibe as informações do usuario -->
+            <div class="informacoes">
+                <p>Nome</p>
+                <p style="color: rgb(185, 185, 185); font-size: 14px; margin-top: 4px;">Email</p>
+            </div>
+            <!-- botões do menu -->
+            <div class="infoMenu">
+                <a href="#">
+                    <div class="butinfoMenu">Meus Projetos</div>
+                </a>
+                <a href="#">
+                    <div class="butinfoMenu">Descobrir</div>
+                </a>
+            </div>
+            <!-- botão de sair -->
+            <a href="#">
+                <div class="sair">
+                    <img src="_Icon_sair.png" alt=""><p style="color: black;">Sair</p>
+                </div>
+            </a>
         </div>
 
+        <!-- parte inicial do header -->
         <div class="inicioheader">
             <div class="menu" onclick="menu()"> <img src="menu.png" alt=""> </div>
             <div class="logo"> <img src="logo.png" alt=""> </div>
-
+            <!-- botão de projetos -->
             <a href="#">
                 <div class="botaoprojetos"><h6>Meus Projetos</h6></div>
             </a>
-
+            <!-- botão de Descobrir -->
             <a href="#">
                 <div class="descobrir"><h6>Descobrir</h6></div>
             </a>
         </div>
+        <!-- parte final do header -->
         <div class="fimheader">
             <div class="foto"> <img src="perfil.png" alt=""> </div>
             <div class="notificacao"><img src="sino_notificacao.png" alt=""></div>
         </div>
     </header>
 
-    <main>
+    <!-- inicio do main -->
+    <main onclick="fechaMenu()">
+        <!-- texto principal da pagina -->
         <div class="texto">
             <h4>Junte-se à comunidade de inovação, inspiração e descobertas, transformando experiências em conexões inesquecíveis</h4>
         </div>
 
+        <!-- container principal -->
         <div class="container">
+            <!-- input de buscar tags -->
             <div class="buscatag">
                 <input type="text" name="" id="buscarTags" placeholder="Buscar tags">
             </div>
-            
+            <!-- lugar de exibir os projetos -->
             <div class="exibirprojetos">
                 <div class="projeto"></div>
                 <div class="projeto"></div>
@@ -58,7 +86,9 @@
         </div>
     </main>
 
+    <!-- código JS -->
     <script>
+        /* função para abrir e fechar o menu clicando no icone de menu*/
         function menu(){
             let divmenu = document.getElementById('menu');
             if(divmenu.style.display == 'none'){
@@ -67,7 +97,12 @@
             else{
                 divmenu.style.display = 'none';
             }
+        }
 
+        /* função para fechar o menu quando o usuario clicar no main*/
+        function fechaMenu(){
+            let divmenu = document.getElementById('menu');
+            divmenu.style.display = 'none';
         }
     </script>
 </body>
