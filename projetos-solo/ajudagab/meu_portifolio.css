@@ -202,7 +202,6 @@ main{
         font-weight: 400;
         max-width: 744px;
         margin: auto;
-        
         text-align: center;
         margin-bottom: 35px;
         
@@ -247,6 +246,7 @@ main{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
     row-gap: 15px;
     column-gap: 15px;
 }
