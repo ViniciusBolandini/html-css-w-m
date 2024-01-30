@@ -77,7 +77,10 @@ header{
 /* configuração do da tag main da página*/
 main{
     padding: 112px 20px 30px 20px;
+    margin: auto;
 }
+
+
 
 /* configuração da div que possui os elementos do início do header*/
 .inicioheader{
@@ -237,8 +240,25 @@ main{
 }
 
 .container{
-    max-width: 1800px;
+    max-width: 1300px;
     margin: auto;
+    padding-left: 20px;
+}
+
+@media (max-width: 1256px){
+    .container{
+        padding-left: 0px;
+        max-width: 795px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 832px){
+    .container{
+        padding-left: 0px;
+        max-width: 430px;
+        margin: auto;
+    }
 }
 
 /* configuração da div que e pai das divs que vão exibir os projetos*/
@@ -246,7 +266,7 @@ main{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: start;
     row-gap: 15px;
     column-gap: 15px;
 }

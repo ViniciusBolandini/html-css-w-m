@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .bloco{
+            background-color: aquamarine;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        #pop{
+            width: 500px;
+            height: 500px;
+            background-color: rgb(181, 118, 240);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: none;
+            font-size: 30px;
+        }
+        .imagembloco{
+            width: 80px;
+        }
+
+        #imagempop{
+            width: 400px;
+            height: 400px;
+        }
+        .fechar{
+            position: absolute;  
+            top: 0px; 
+            right: 0px;
+            background-color: aqua;
+            padding: 10px;
+        }
+    </style>
+    <div class="container">
+        <div class="bloco" ><img src="flor.webp" alt="" class="imagembloco"> <p>flor</p></div>
+        <div class="bloco" ><img src="lago.avif" alt="" class="imagembloco"> <p>lago</p></div>
+        <div class="bloco" ><img src="monalisa.webp" alt="" class="imagembloco"> <p>monalisa</p></div>
+
+        <div id="pop"><img src="" alt="" id="imagempop"> <p></p> <div class="fechar" onclick="fecharpop()">X</div></div>
+    </div>
+
+
+
+    <script>
+        const pegadiv = document.querySelectorAll('.bloco');
+        console.log(pegadiv);
+        const pegaid = document.querySelector('#bloco');
+        console.log(pegaid);
+        var i;
+        for(i = 0; i<pegadiv.length; i++){
+            pegadiv[i].onclick = trocacor;
+        }
+
+        function trocacor(){
+            let pop = document.getElementById('pop');
+            let imagempop = document.getElementById('imagempop');
+            let imagembloco = this.children[0];
+            let nome = this.children[1];
+            pop.style.display = 'block';
+            imagempop.src = imagembloco.src;
+            pop.children[1].innerText = this.children[1].innerText;
+
+            console.log(this.children[1].innerText);
+
+        }
+
+        function fecharpop(){
+            let pop = document.getElementById('pop');
+            pop.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
