@@ -83,16 +83,9 @@
                         <img src="perfil.png" alt="">
                         <p>Gabriel Mazer</p>
                     </div>
+                    <p style="display: none;"> descricao</p>
+                    <a href="#" style="display: none;">link</a>
                 </div>
-
-                <div class="projeto">
-                    <img src="foto_projeto_teste2.png" alt="">
-                    <div class="rodapeProjeto">
-                        <img src="perfil2.png" alt="">
-                        <p>Joao Victor</p>
-                    </div>
-                </div>
-
 
              </div>
         </div>
@@ -111,8 +104,8 @@
             <img src="" alt="" id="imagempopProjeto">
         </div>
          <div class="popfooter">
-             <p id="descri">descriçao: Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quas facere aspernatur saepe repudiandae officiis blanditiis dolorem minima voluptate. Omnis cupiditate assumenda nemo sit facilis nulla, quae sunt modi! Facilis?</p>
-             <a href="#">link</a>
+             <p id="descri"></p>
+             <a href="#" id="linkPop">Download</a>
          </div>
          <div class="fechar" onclick="fecharpop()"><img src="remover.png" alt="" style="width: 24px;"></div>
     </div>
@@ -157,14 +150,27 @@
             let nomeProjeto = this.children[1].children[1];
             let nomepop = document.getElementById('nomepop');
             let telaescura = document.getElementById('telaescura');
+
+            let descricaoProjeto = this.children[2];
+            let descricaoPop = document.getElementById('descri');
+
+            let linkProjeto = this.children[3];
+            let linkPop = document.getElementById('linkPop');
+            
+
+
+            telaescura.style.display = 'block';
             pop.style.display = 'block';
             imagemperfilpop.src = imagemPerfilProjeto.src;
             imagempop.src = imagemProjeto.src;
             nomepop.innerText = nomeProjeto.innerText;
-            telaescura.style.display = 'block';
+
+            descricaoPop.innerText = descricaoProjeto.innerText;
+            linkPop.href = linkProjeto.href;
+            
 
         }
-        //gne
+
         function fecharpop(){
             let pop = document.getElementById('pop');
             pop.style.display = 'none';
