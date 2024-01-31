@@ -77,12 +77,48 @@
             </div>
             <!-- lugar de exibir os projetos -->
             <div class="exibirprojetos">
-                <div class="projeto"></div>
-                <div class="projeto"></div>
-                
+                <div class="projeto">
+                    <img src="foto_projeto_teste.png" alt="">
+                    <div class="rodapeProjeto">
+                        <img src="perfil.png" alt="">
+                        <p>Gabriel Mazer</p>
+                    </div>
+                </div>
+
+                <div class="projeto">
+                    <img src="foto_projeto_teste2.png" alt="">
+                    <div class="rodapeProjeto">
+                        <img src="perfil2.png" alt="">
+                        <p>Joao Victor</p>
+                    </div>
+                </div>
+
+
              </div>
         </div>
     </main>
+
+    <div id="pop">
+        <div class="headerpop">
+            <div class="fotoEnome">
+                <img src="" alt="imagemperfil" id="imagemperfilpop">
+                <p id="nomepop">nome</p>
+            </div>
+            <p id="titulopop">titulo</p>
+            <div class="tag">tags</div>
+        </div> 
+         <div class="imgprojeto">
+            <img src="" alt="" id="imagempopProjeto">
+        </div>
+         <div class="popfooter">
+             <p id="descri">descriçao: Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quas facere aspernatur saepe repudiandae officiis blanditiis dolorem minima voluptate. Omnis cupiditate assumenda nemo sit facilis nulla, quae sunt modi! Facilis?</p>
+             <a href="#">link</a>
+         </div>
+         <div class="fechar" onclick="fecharpop()"><img src="remover.png" alt="" style="width: 24px;"></div>
+    </div>
+
+    <div id="telaescura" onclick="fecharpop()"></div>
+
 
     <!-- código JS -->
     <script>
@@ -101,6 +137,39 @@
         function fechaMenu(){
             let divmenu = document.getElementById('menu');
             divmenu.style.display = 'none';
+        }
+
+
+        // parte do codigo que abre o popup para vir com as info
+        const divprojeto = document.querySelectorAll('.projeto');
+        var i;
+
+        for(i = 0; i<divprojeto.length; i++){
+            divprojeto[i].onclick = abrirpop;
+        }
+
+        function abrirpop(){
+            let pop = document.getElementById('pop');
+            let imagempop = document.getElementById('imagempopProjeto');
+            let imagemProjeto = this.children[0];
+            let imagemperfilpop = document.getElementById('imagemperfilpop');
+            let imagemPerfilProjeto = this.children[1].children[0];
+            let nomeProjeto = this.children[1].children[1];
+            let nomepop = document.getElementById('nomepop');
+            let telaescura = document.getElementById('telaescura');
+            pop.style.display = 'block';
+            imagemperfilpop.src = imagemPerfilProjeto.src;
+            imagempop.src = imagemProjeto.src;
+            nomepop.innerText = nomeProjeto.innerText;
+            telaescura.style.display = 'block';
+
+        }
+
+        function fecharpop(){
+            let pop = document.getElementById('pop');
+            pop.style.display = 'none';
+            let telaescura = document.getElementById('telaescura');
+            telaescura.style.display = 'none';
         }
     </script>
 </body>

@@ -39,28 +39,44 @@
             background-color: aqua;
             padding: 10px;
         }
+
+        #div1{
+            background-color: aqua;
+            display: inline-block;
+        }
     </style>
     <div class="container">
         <div class="bloco" ><img src="flor.webp" alt="" class="imagembloco"> <p>flor</p></div>
         <div class="bloco" ><img src="lago.avif" alt="" class="imagembloco"> <p>lago</p></div>
         <div class="bloco" ><img src="monalisa.webp" alt="" class="imagembloco"> <p>monalisa</p></div>
 
-        <div id="pop"><img src="" alt="" id="imagempop"> <p></p> <div class="fechar" onclick="fecharpop()">X</div></div>
+        <div id="pop">
+            <img src="" alt="" id="imagempop">
+             <p></p> 
+             <div class="fechar" onclick="fecharpop()">X</div>
+        </div>
     </div>
 
+    <div id="div1">
+        <div>
+            <p>ola</p>
+            <h1>td bem</h1>
+        </div>
+    </div>
 
 
     <script>
         const pegadiv = document.querySelectorAll('.bloco');
-        console.log(pegadiv);
-        const pegaid = document.querySelector('#bloco');
-        console.log(pegaid);
+
+        const div1 = document.querySelector('#div1');
+
+        console.log(div1.children[0].children[0]);
         var i;
         for(i = 0; i<pegadiv.length; i++){
-            pegadiv[i].onclick = trocacor;
+            pegadiv[i].onclick = abrirpop;
         }
 
-        function trocacor(){
+        function abrirpop(){
             let pop = document.getElementById('pop');
             let imagempop = document.getElementById('imagempop');
             let imagembloco = this.children[0];
@@ -68,9 +84,6 @@
             pop.style.display = 'block';
             imagempop.src = imagembloco.src;
             pop.children[1].innerText = this.children[1].innerText;
-
-            console.log(this.children[1].innerText);
-
         }
 
         function fecharpop(){
