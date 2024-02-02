@@ -7,22 +7,41 @@
 </head>
 <body>
     <style>
-        #p1{
-            display: none;
-        }
-        #p2{
-            color: blue;
+        .centralizada {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: lightblue;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
     </style>
-    <p id="p1">vinicius</p>
 
-    <h1 id="p2">m</h1>
+    <div id="minhaDiv" class="centralizada">
+        Esta é a div centralizada.
+    </div>
 
 
     <script>
-        let escondido = document.getElementById('p1');
-        let mostra = document.getElementById('p2');
-        mostra.innerText = escondido.innerText;
+                function centralizarDiv() {
+            var minhaDiv = document.getElementById('minhaDiv');
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            // Calcula as posições para centralizar a div
+            var leftPos = (larguraJanela - minhaDiv.offsetWidth) / 2;
+            var topPos = (alturaJanela - minhaDiv.offsetHeight) / 2;
+
+            // Define as novas posições
+            minhaDiv.style.left = leftPos + 'px';
+            minhaDiv.style.top = topPos + 'px';
+        }
+
+        // Chama a função para centralizar a div quando a página é carregada e a janela é redimensionada
+        window.onload = centralizarDiv;
+        window.onresize = centralizarDiv;
     </script>
 </body>
 </html>

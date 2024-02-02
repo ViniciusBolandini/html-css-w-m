@@ -302,10 +302,11 @@ main{
     color: #515255;
 }
 
-/* teste pop==================================*/
 
+/* start of new code*/
 #pop{
-    width: 1042px;
+    width: 90%;
+    max-width: 1042px;
     background-color: rgb(255, 255, 255);
     position: absolute;
     z-index: 2;
@@ -315,6 +316,23 @@ main{
     display: none;
     padding: 45px 90px;
 }
+
+#datapop{
+    color: #515255;
+}
+
+#titulopop{
+    font-size: 24px;
+}
+
+#linkPop{
+    color: rgb(255, 255, 255);
+    padding: 8px 22px;
+    background-color: #FF5522;
+    border-radius: 5px;
+}
+/* end of new code*/
+
 
 div.imgprojeto{
     text-align: center;
@@ -376,8 +394,6 @@ div.imgprojeto{
     display: none;
 }
 
-#linkPop{
-    color: black;
-}
+
 
 

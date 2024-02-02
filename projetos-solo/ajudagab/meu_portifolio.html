@@ -82,9 +82,12 @@
                     <div class="rodapeProjeto">
                         <img src="perfil.png" alt="">
                         <p>Gabriel Mazer</p>
+                        <p style="display: none;">data</p>
                     </div>
                     <p style="display: none;"> descricao</p>
                     <a href="#" style="display: none;">link</a>
+                    <p style="display: none;">titulo</p>
+                    
                 </div>
 
              </div>
@@ -95,9 +98,14 @@
         <div class="headerpop">
             <div class="fotoEnome">
                 <img src="" alt="imagemperfil" id="imagemperfilpop">
-                <p id="nomepop">nome</p>
+                <!-- novo -->
+                <div>
+                    <p id="nomepop">nome</p>
+                    <p id="datapop">05/01</p>
+                </div>
+                <!-- n -->
             </div>
-            <p id="titulopop">titulo</p>
+            <p id="titulopop"></p>
             <div class="tag">tags</div>
         </div> 
          <div class="imgprojeto">
@@ -150,24 +158,29 @@
             let nomeProjeto = this.children[1].children[1];
             let nomepop = document.getElementById('nomepop');
             let telaescura = document.getElementById('telaescura');
-
             let descricaoProjeto = this.children[2];
             let descricaoPop = document.getElementById('descri');
-
             let linkProjeto = this.children[3];
             let linkPop = document.getElementById('linkPop');
-            
 
+            //novo
+            let tituloPop = document.getElementById('titulopop');
+            let tituloProjeto = this.children[4];
+            tituloPop.innerText = tituloProjeto.innerText;
+
+            let dataPop = document.getElementById('datapop');
+            let dataProjeto = this.children[5];
+            dataPop.innerText = dataProjeto.innerText;
+
+            //
 
             telaescura.style.display = 'block';
             pop.style.display = 'block';
             imagemperfilpop.src = imagemPerfilProjeto.src;
             imagempop.src = imagemProjeto.src;
             nomepop.innerText = nomeProjeto.innerText;
-
             descricaoPop.innerText = descricaoProjeto.innerText;
             linkPop.href = linkProjeto.href;
-            
 
         }
 
