@@ -6,6 +6,30 @@
     <title>aula 12</title>
 </head>
 <body>
-    
+    <script>
+        const promi = new Promise(function(resolve,reject){
+            let obj = [
+                {marca:'bmw', modelo:2020},
+                {marca:'mercedez', modelo:2020},
+                {marca:'ford', modelo:2016}
+            ]
+
+            let carro2020 = obj.filter((carro) => {
+                return carro.modelo==2020;
+            })
+
+            if(carro2020.length == 0){
+                return reject('nenhum carro encontrado');
+            }
+            if(carro2020.length > 0){
+                return resolve(carro2020);
+            }
+        })
+
+        promi.then((data)=>{
+            console.log(data);
+        })
+            
+    </script>
 </body>
 </html>
