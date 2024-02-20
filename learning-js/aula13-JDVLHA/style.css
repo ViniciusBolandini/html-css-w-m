@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.table{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    column-gap: 4px;
+    row-gap: 4px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.square{
+    height: 100px;
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+.simbol{
+    width: 100px;
+    
+}
+
+.marcador{
+    display: block;
+}
