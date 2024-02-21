@@ -34,3 +34,10 @@ h1{
 .marcador{
     display: block;
 }
+
+#reset{
+    
+    width: 100px;
+    margin: auto;
+    display: none;
+}
