@@ -6,13 +6,23 @@
     <title>teste</title>
 </head>
 <body>
+    <style>
+        #menu{
+
+        }
+        .cl{
+            background-color: rgb(216, 216, 216);
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+    <div id="menu" class="cl" marcador="x">1</div>
     <script>
-        var vet = [];
+        let div = document.getElementById("menu");
+        div.setAttribute("marcador","o");
+        let marcador = div.getAttribute("marcador");
+        console.log(marcador);
 
-        vet[0] = 'ola';
-        vet[1] = 'como vai';
-
-        console.log(vet);
     </script>
 </body>
 </html>
